@@ -1,0 +1,74 @@
+* {
+  font-family:Verdana, Arial,'Liberation Sans','FreeSans','Hiragino Sans GB',sans-serif,'Helvetica Neue';
+}
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #eee;
+  background: url("/sampleapp/img/background.jpg") repeat scroll 0 0 #DCDFE2;
+}
+li ul, li ol {margin:0;}
+ul, ol {margin:0 1.5em 1.5em 0;padding-left:1.5em;}
+ul, ol {list-style-type:none;}
+.top-margin-large {
+	margin-top:50px;
+}
+
+.preview-div {
+	width:285px;
+	height:647px;
+}
+/***/
+.step2-template-wrap {
+	
+}
+.step2-template-wrap li {
+	cursor:pointer;
+	float:left;
+	width:207px;
+	height:467px;
+	margin-right:50px;
+	background-image:url("/sampleapp/img/phone-white.png");
+}
+.step2-template-wrap .active {
+	background-image:url("/sampleapp/img/phone-black.png");
+}
+.step2-template-wrap li:hover {
+	background-image:url("/sampleapp/img/phone-black.png");
+}
+.step2-template-wrap li img {
+	padding-top:41px;
+	margin-left:13px;
+}
+/***/
+.background-white {
+	background-color:#ffffff;
+	magin:20px;
+}
+.background-oragin {
+	background-color:#ec744a;
+}
+.background-red {
+	background-color:#eb6364;
+}
+.background-yellow {
+	background-color:#ea9b1e;
+}
+.background-blue {
+	background-color:#59acd4;
+}
+.background-green {
+	background-color:#8dc668;
+}
+.background-purple {
+	background-color:#b5629c;
+}
+.icon-wrap {
+	width:70px;
+	height:70px;
+}
+.icon-wrap img {
+	width:70px;
+	height:70px;
+}
+
