@@ -6,18 +6,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.subaozuche.bo.UserBo;
+import com.subaozuche.bo.AdminUserBo;
 
 @Controller
 @RequestMapping("admin120/user")
-public class UserController {
+public class AdminUserController {
 	private static final String VIEW_DIR = "admin/user/";
 	private ModelAndView view = new ModelAndView();
 
 	@Autowired
-	private UserBo userBo;
+	private AdminUserBo userBo;
 
-	public UserController() {
+	public AdminUserController() {
 		view.addObject("menuId", 0);
 		view.addObject("subMenuId", 0);
 	}

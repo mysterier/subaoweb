@@ -3,7 +3,7 @@
 <mapper namespace="com.subaozuche.dao.UserDao">
 	<insert id="add" useGeneratedKeys="true" keyProperty="id">
 		INSERT INTO
-		`users` (user_name, user_pass, created_at, updated_at) VALUES
-		(#{userName}, #{userPass}, #{createdAt}, #{updateAt})
+		`users` (user_name, user_pass, updated_at) VALUES
+		(#{userName}, #{userPass}, #{updateAt})
 	</insert>
 </mapper>

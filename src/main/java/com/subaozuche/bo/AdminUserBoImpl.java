@@ -5,31 +5,31 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.subaozuche.dao.UserDao;
-import com.subaozuche.model.User;
+import com.subaozuche.dao.AdminUserDao;
+import com.subaozuche.model.AdminUser;
 
 @Service("userBo")
-public class UserBoImpl implements UserBo {
+public class AdminUserBoImpl implements AdminUserBo {
 	@Autowired
-	private UserDao userDao;
+	private AdminUserDao userDao;
 
 	@Override
-	public User findById(int id) {
+	public AdminUser findById(int id) {
 		return userDao.findById(id);
 	}
 
 	@Override
-	public List<User> findAll() {
+	public List<AdminUser> findAll() {
 		return userDao.findAll();
 	}
 
 	@Override
-	public void add(User user) {
+	public void add(AdminUser user) {
 		userDao.add(user);
 	}
 
 	@Override
-	public void update(User user) {
+	public void update(AdminUser user) {
 		userDao.update(user);
 	}
 

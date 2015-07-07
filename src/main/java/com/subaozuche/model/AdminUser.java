@@ -2,11 +2,10 @@ package com.subaozuche.model;
 
 import java.sql.Timestamp;
 
-public class User {
+public class AdminUser {
 	private int id;
 	private String userName;
 	private String userPass;
-	private Timestamp createdAt;
 	private Timestamp updatedAt;
 
 	public int getId() {
@@ -33,14 +32,6 @@ public class User {
 		this.userPass = userPass;
 	}
 
-	public Timestamp getCreatedAt() {
-		return createdAt;
-	}
-
-	public void setCreatedAt(Timestamp createdAt) {
-		this.createdAt = createdAt;
-	}
-
 	public Timestamp getUpdatedAt() {
 		return updatedAt;
 	}
@@ -48,11 +39,4 @@ public class User {
 	public void setUpdatedAt(Timestamp updatedAt) {
 		this.updatedAt = updatedAt;
 	}
-
-	@Override
-	public String toString() {
-		return "User [id=" + id + ", userName=" + userName + ", userPass=" + userPass + ", createdAt=" + createdAt
-				+ ", updatedAt=" + updatedAt + "]";
-	}
-
 }
