@@ -1,5 +1,5 @@
 package com.subaozuche.controller;
 
-public class Home {
+public class HelperController {
 
 }
