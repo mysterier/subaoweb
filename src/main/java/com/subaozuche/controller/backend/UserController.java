@@ -1,4 +1,4 @@
-package com.subaozuche.controller.admin;
+package com.subaozuche.controller.backend;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

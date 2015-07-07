@@ -7,16 +7,14 @@
 		</encoder>
 	</appender>
 	<appender name="FILE" class="ch.qos.logback.core.FileAppender">
-		<file>${catalina.home}/logs/jackylab.log</file>
+		<file>${catalina.home}/logs/subaoweb.log</file>
 		<layout class="ch.qos.logback.classic.PatternLayout">
 			<Pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
 		</layout>
 	</appender>
 
-	<!-- <logger name="com.jackylab" level="DEBUG"/> -->
-	<!-- <logger name="com.jackylab.dao" level="DEBUG"/> -->
-	<logger name="com.jackylab.controller" level="DEBUG"/>
-	<logger name="com.jackylab.controller.admin" level="DEBUG"/>
+	<logger name="com.subaozuche.controller" level="DEBUG"/>
+	<logger name="com.subaozuche.controller.backend" level="DEBUG"/>
 
 	<root level="INFO">
 		<appender-ref ref="STDOUT" />

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>${adminTitle}</title>
+    <title>${adminPageTitle}</title>
     <!-- Bootstrap Core CSS -->
     <link href="${url}/admin/css/bootstrap.min.css" rel="stylesheet">
     <!-- MetisMenu CSS -->
@@ -22,7 +22,7 @@
                 <div class="login-panel panel panel-default">
                     <div class="panel-heading"><h3 class="panel-title">后台管理系统</h3></div>
                     <div class="panel-body">
-                        <form action="${adminUrl}/login" method="post">
+                        <form action="${backendUrl}/login" method="post">
                             <fieldset>
                                 <div class="form-group">
                                     <input class="form-control" placeholder="用户名" name="userName" type="text" autofocus>

@@ -1,4 +1,4 @@
-package com.subaozuche.controller.admin;
+package com.subaozuche.controller.backend;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,14 +11,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.subaozuche.model.AdminLoginForm;
 
 @Controller
-@RequestMapping("admin120")
+@RequestMapping("backend")
 public class LoginController {
 	private static Logger logger = LoggerFactory.getLogger(LoginController.class);
 
 	@RequestMapping(value = { "/", "login" }, method = RequestMethod.GET)
 	public String login(Model model) {
 		model.addAttribute("loginForm", new AdminLoginForm());
-		return "admin/login";
+		return "backend/login";
 	}
 
 	@RequestMapping(value = { "/", "login" }, method = RequestMethod.POST)

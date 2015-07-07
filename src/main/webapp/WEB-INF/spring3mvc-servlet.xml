@@ -12,12 +12,12 @@
             http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
 
 	<!-- enable component scanning (beware: it does not enable mapper scanning!) -->
-	<context:component-scan base-package="com.jackylab.bo" />
-	<context:component-scan base-package="com.jackylab.dao" />
+	<context:component-scan base-package="com.subaozuche.bo" />
+	<context:component-scan base-package="com.subaozuche.dao" />
 
 	<!-- enable component scanning (of presentation layer only) -->
-	<context:component-scan base-package="com.jackylab.action" />
-	<context:component-scan base-package="com.jackylab.action.admin" />
+	<context:component-scan base-package="com.subaozuche.controller" />
+	<context:component-scan base-package="com.subaozuche.controller.backend" />
 
 	<!-- enable autowire -->
 	<context:annotation-config />
@@ -27,9 +27,8 @@
 
 	<!-- scan for mappers and let them be autowired -->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<!-- <property name="annotationClass" value="org.springframework.stereotype.Repository" 
-			/> -->
-		<property name="basePackage" value="com.jackylab.dao" />
+		<!-- <property name="annotationClass" value="org.springframework.stereotype.Repository" /> -->
+		<property name="basePackage" value="com.subaozuche.dao" />
 		<!-- <property name="sqlSessionFactory" ref="sqlSessionFactory" /> -->
 	</bean>
 
@@ -71,10 +70,41 @@
 	</bean>
 	<!-- 全局异常配置 end -->
 
+	<!-- 设置freeMarker的配置文件路径 -->
+	<bean id="freemarkerConfiguration"
+		class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+		<property name="location" value="classpath:freemarker.properties" />
+	</bean>
+
+	<bean id="fmXmlEscape" class="freemarker.template.utility.XmlEscape" />
+
+	<!-- 配置freeMarker的模板路径 -->
+	<bean id="freemarkerConfig"
+		class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+		<property name="templateLoaderPath">
+			<value>/WEB-INF/views/</value>
+		</property>
+		<property name="freemarkerVariables">
+			<map>
+				<entry key="xml_escape" value-ref="fmXmlEscape" />
+				<entry key="pageTitle" value="苏宝租车后台管理系统" />
+				<entry key="adminPageTitle" value="苏宝租车后台管理系统" />
+				<entry key="url" value="/" />
+				<entry key="backendUrl" value="/backend" />
+			</map>
+		</property>
+	</bean>
+
+	<!-- 配置freeMarker视图解析器 -->
 	<bean id="viewResolver"
-		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
-		<property name="prefix" value="/WEB-INF/jsp/" />
-		<property name="suffix" value=".jsp" />
+		class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+		<property name="viewClass"
+			value="org.springframework.web.servlet.view.freemarker.FreeMarkerView" />
+		<property name="contentType" value="text/html; charset=utf-8" />
+		<property name="cache" value="false" />
+		<property name="prefix" value="" />
+		<property name="suffix" value=".ftl" />
+		<property name="exposeSpringMacroHelpers" value="true"></property>
+		<property name="exposeRequestAttributes" value="true"></property>
 	</bean>
 </beans>

@@ -4,23 +4,11 @@
 <configuration>
 
 	<typeAliases>
-		<typeAlias alias="Album" type="com.jackylab.model.Album" />
-		<typeAlias alias="Category" type="com.jackylab.model.Category" />
-		<typeAlias alias="Comment" type="com.jackylab.model.Comment" />
-		<typeAlias alias="Photo" type="com.jackylab.model.Photo" />
-		<typeAlias alias="Post" type="com.jackylab.model.Post" />
-		<typeAlias alias="User" type="com.jackylab.model.User" />
-		<typeAlias alias="ViewLog" type="com.jackylab.model.ViewLog" />
+		<typeAlias alias="User" type="com.subaozuche.model.User" />
 	</typeAliases>
 
 	<mappers>
-		<mapper resource="com/jackylab/dao/Album.mybatis.xml" />
-		<mapper resource="com/jackylab/dao/Category.mybatis.xml" />
-		<mapper resource="com/jackylab/dao/Comment.mybatis.xml" />
-		<mapper resource="com/jackylab/dao/Photo.mybatis.xml" />
-		<mapper resource="com/jackylab/dao/Post.mybatis.xml" />
-		<mapper resource="com/jackylab/dao/User.mybatis.xml" />
-		<mapper resource="com/jackylab/dao/ViewLog.mybatis.xml" />
+		<mapper resource="com/subaozuche/dao/User.mybatis.xml" />
 	</mappers>
 
 </configuration>
