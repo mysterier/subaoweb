@@ -3,7 +3,7 @@
 		<ul class="nav" id="side-menu">
 			<li class="sidebar-search"></li>
 			<li>
-				<a href="${adminUrl}/dashboard/"><i class="fa fa-dashboard fa-fw"></i> 仪表盘</a>
+				<a href="${backendUrl}/dashboard/"><i class="fa fa-dashboard fa-fw"></i> 仪表盘</a>
 			</li>
 			<li <#if menuId==1 >class="active"</#if>>
 				<a href="#"><i class="fa fa-fw fa-font"></i> 博客管理<span class="fa arrow"></span></a>
@@ -21,7 +21,7 @@
 					<li><a href="${adminUrl}/photo/" <#if subMenuId==202 >class="active"</#if>>相册照片</a></li>
 				</ul>
 			</li>
-			<li><a href="${adminUrl}/user/"><i class="fa fa-fw fa-user"></i> 用户管理</a></li>
+			<li><a href="${backendUrl}/user/"><i class="fa fa-fw fa-user"></i> 用户管理</a></li>
 		</ul>
 	</div>
 </div>

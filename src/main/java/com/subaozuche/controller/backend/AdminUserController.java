@@ -9,13 +9,13 @@ import org.springframework.web.servlet.ModelAndView;
 import com.subaozuche.bo.AdminUserBo;
 
 @Controller
-@RequestMapping("admin120/user")
+@RequestMapping("backend/adminuser")
 public class AdminUserController {
-	private static final String VIEW_DIR = "admin/user/";
+	private static final String VIEW_DIR = "backend/user/";
 	private ModelAndView view = new ModelAndView();
 
 	@Autowired
-	private AdminUserBo userBo;
+	private AdminUserBo adminUserBo;
 
 	public AdminUserController() {
 		view.addObject("menuId", 0);
@@ -24,7 +24,7 @@ public class AdminUserController {
 
 	@RequestMapping(value = { "", "list" }, method = RequestMethod.GET)
 	public ModelAndView list() {
-		view.addObject("users", userBo.findAll());
+		view.addObject("users", adminUserBo.findAll());
 		view.setViewName(VIEW_DIR + "list");
 		return view;
 	}

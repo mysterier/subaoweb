@@ -4,11 +4,11 @@
 <configuration>
 
 	<typeAliases>
-		<typeAlias alias="User" type="com.subaozuche.model.User" />
+		<typeAlias alias="AdminUser" type="com.subaozuche.model.AdminUser" />
 	</typeAliases>
 
 	<mappers>
-		<mapper resource="com/subaozuche/dao/User.mybatis.xml" />
+		<mapper resource="com/subaozuche/dao/AdminUser.mybatis.xml" />
 	</mappers>
 
 </configuration>
