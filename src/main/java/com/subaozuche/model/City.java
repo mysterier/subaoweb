@@ -1,7 +1,10 @@
 package com.subaozuche.model;
 
+import org.hibernate.validator.constraints.NotBlank;
+
 public class City {
 	private int id;
+	@NotBlank(message = "城市不能为空")
 	private String cityName;
 
 	public int getId() {
