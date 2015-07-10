@@ -4,7 +4,7 @@
 			<li class="sidebar-search"></li>
 			<li <#if menuId==1 >class="active"</#if>>
 				<ul class="nav nav-second-level">
-					<li><a href="${backendUrl}/user/" <#if subMenuId==100 >class="active"</#if>>管理员</a></li>
+					<li><a href="${backendUrl}/adminuser/" <#if subMenuId==100 >class="active"</#if>>管理员</a></li>
 					<li><a href="${backendUrl}/client/" <#if subMenuId==104 >class="active"</#if>>用户管理</a></li>
 					<li><a href="${backendUrl}/order/" <#if subMenuId==102 >class="active"</#if>>订单管理</a></li>
 					<li><a href="${backendUrl}/city/" <#if subMenuId==101 >class="active"</#if>>城市管理</a></li>
