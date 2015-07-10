@@ -5,10 +5,18 @@
 
 	<typeAliases>
 		<typeAlias alias="AdminUser" type="com.subaozuche.model.AdminUser" />
+		<typeAlias alias="City" type="com.subaozuche.model.City" />
+		<typeAlias alias="Order" type="com.subaozuche.model.Order" />
+		<typeAlias alias="News" type="com.subaozuche.model.News" />
+		<typeAlias alias="Client" type="com.subaozuche.model.Client" />
 	</typeAliases>
 
 	<mappers>
 		<mapper resource="com/subaozuche/dao/AdminUser.mybatis.xml" />
+		<mapper resource="com/subaozuche/dao/City.mybatis.xml" />
+		<mapper resource="com/subaozuche/dao/Order.mybatis.xml" />
+		<mapper resource="com/subaozuche/dao/News.mybatis.xml" />
+		<mapper resource="com/subaozuche/dao/Client.mybatis.xml" />
 	</mappers>
 
 </configuration>

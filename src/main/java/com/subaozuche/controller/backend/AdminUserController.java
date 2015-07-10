@@ -14,9 +14,8 @@ import org.springframework.web.servlet.ModelAndView;
 import com.subaozuche.bo.AdminUserBo;
 import com.subaozuche.model.AdminUser;
 
-
 @Controller
-@RequestMapping("backend/adminuser")
+@RequestMapping("backend/user")
 public class AdminUserController {
 	private static final String VIEW_DIR = "backend/user/";
 	private ModelAndView view = new ModelAndView();

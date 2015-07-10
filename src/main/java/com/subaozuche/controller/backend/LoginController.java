@@ -7,13 +7,17 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.subaozuche.model.AdminLoginForm;
 
 @Controller
 @RequestMapping("backend")
 public class LoginController {
-	private static Logger logger = LoggerFactory.getLogger(LoginController.class);
+	private static final String VIEW_DIR = "backend/";
+	private static Logger logger = LoggerFactory
+			.getLogger(LoginController.class);
+	private ModelAndView view = new ModelAndView();
 
 	@RequestMapping(value = { "/", "login" }, method = RequestMethod.GET)
 	public String login(Model model) {
@@ -22,9 +26,12 @@ public class LoginController {
 	}
 
 	@RequestMapping(value = { "/", "login" }, method = RequestMethod.POST)
-	public String loginDo(@ModelAttribute("form") AdminLoginForm form) {
+	public ModelAndView loginDo(@ModelAttribute("form") AdminLoginForm form) {
 		logger.debug("Name is  ===== " + form.getUserName(), form.getUserName());
-		return "redirect:album";
+		view.addObject("menuId", 1);
+		view.addObject("subMenuId", 100);
+		view.setViewName(VIEW_DIR + "index");
+		return view;
 	}
 
 }

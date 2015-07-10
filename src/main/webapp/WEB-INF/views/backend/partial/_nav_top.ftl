@@ -6,8 +6,8 @@
 
     <ul class="nav navbar-top-links navbar-right">
         <li>
-            <a class="dropdown-toggle" href="#">登 出</a>
+            <a class="dropdown-toggle" href="${backendUrl}/">登 出</a>
         </li>
     </ul>
-    <#include "_nav_left.ftl">
 </nav>
+ <#include "_nav_left.ftl">
