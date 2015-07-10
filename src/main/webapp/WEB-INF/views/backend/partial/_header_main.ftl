@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>${backendTitle}}</title>
+    <title>${backendPageTitle}</title>
     <!-- Bootstrap Core CSS -->
     <link href="${url}/admin/css/bootstrap.min.css" rel="stylesheet">
     <!-- MetisMenu CSS -->
@@ -17,5 +17,5 @@
 </head>
 <body>
 <div id="wrapper">
-	<#include "_nav_top.ftl">
+	<#--include "_nav_top.ftl"-->
 	<div id="page-wrapper">
