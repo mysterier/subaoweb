@@ -8,34 +8,34 @@ import org.springframework.stereotype.Service;
 import com.subaozuche.dao.AdminUserDao;
 import com.subaozuche.model.AdminUser;
 
-@Service("userBo")
+@Service("adminUserBo")
 public class AdminUserBoImpl implements AdminUserBo {
 	@Autowired
-	private AdminUserDao userDao;
+	private AdminUserDao adminUserDao;
 
 	@Override
 	public AdminUser findById(int id) {
-		return userDao.findById(id);
+		return adminUserDao.findById(id);
 	}
 
 	@Override
 	public List<AdminUser> findAll() {
-		return userDao.findAll();
+		return adminUserDao.findAll();
 	}
 
 	@Override
-	public void add(AdminUser user) {
-		userDao.add(user);
+	public void add(AdminUser adminUser) {
+		adminUserDao.add(adminUser);
 	}
 
 	@Override
-	public void update(AdminUser user) {
-		userDao.update(user);
+	public void update(AdminUser adminUser) {
+		adminUserDao.update(adminUser);
 	}
 
 	@Override
 	public void delete(int id) {
-		userDao.delete(id);
+		adminUserDao.delete(id);
 	}
 
 }

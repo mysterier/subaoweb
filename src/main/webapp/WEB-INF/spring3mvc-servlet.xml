@@ -88,8 +88,10 @@
 			<map>
 				<entry key="xml_escape" value-ref="fmXmlEscape" />
 				<entry key="pageTitle" value="苏宝租车后台管理系统" />
-				<entry key="adminPageTitle" value="苏宝租车后台管理系统" />
+				<entry key="backendPageTitle" value="苏宝租车后台管理系统" />
+				<entry key="backendTitle" value="苏宝租车后台管理系统" />
 				<entry key="url" value="/subaoweb" />
+				<entry key="adminUrl" value="/subaoweb" />
 				<entry key="backendUrl" value="/subaoweb/backend" />
 			</map>
 		</property>

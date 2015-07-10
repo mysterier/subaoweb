@@ -14,19 +14,20 @@ import com.subaozuche.model.AdminUser;
 
 public interface AdminUserDao {
 
-	@Select("SELECT id, user_name AS userName, user_pass AS userPass, updated_at AS updateAt "
-			+ "FROM `tbl_admin_user` WHERE id=#{id} ")
+	@Select("SELECT id, user_name AS userName, user_pass AS userPass, updated_at AS updatedAt "
+			+ "FROM tbl_admin_user WHERE id=#{id} ")
 	public AdminUser findById(int id);
 
-	@Select("SELECT id, user_name AS userName, user_pass AS userPass, updated_at AS updateAt "
-			+ "FROM `tbl_admin_user`")
+	@Select("SELECT id, user_name AS userName, user_pass AS userPass, updated_at AS updatedAt "
+			+ "FROM tbl_admin_user")
 	public List<AdminUser> findAll();
 
 	public void add(AdminUser user);
 
-	@Update("UPDATE SET user_name=#{userName}, user_pass=#{userPass}, update_at=#{updateAt} `tbl_admin_user` WHERE id=#{id}")
+	@Update("UPDATE tbl_admin_user SET user_name=#{userName}, user_pass=#{userPass}, "
+			+ "updated_at=#{updatedAt} WHERE id=#{id}")
 	public void update(AdminUser user);
 
-	@Delete("DELETE FROM `tbl_admin_user` WHERE id=#{id}")
+	@Delete("DELETE FROM tbl_admin_user WHERE id=#{id}")
 	public void delete(int id);
 }
