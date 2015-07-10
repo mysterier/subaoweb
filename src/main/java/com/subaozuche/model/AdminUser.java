@@ -11,7 +11,6 @@ public class AdminUser {
 	private String userName;
 	@NotBlank(message = "密码不能为空")
 	private String userPass;
-	@NotBlank(message = "更新时间不能为空")
 	private Timestamp updatedAt;
 
 	public int getId() {
