@@ -2,13 +2,21 @@ package com.subaozuche.model;
 
 import java.sql.Timestamp;
 
+import org.hibernate.validator.constraints.NotBlank;
+
 public class Client {
 	private int id;
+	@NotBlank(message = "手机号不能为空")
 	private String mobile;
+	@NotBlank(message = "用户名不能为空")
 	private String clientName;
+	@NotBlank(message = "用户密码不能为空")
 	private String clientPass;
+	@NotBlank(message = "邮箱不能为空")
 	private String clientEmail;
+	@NotBlank(message = "创建时间不能为空")
 	private Timestamp createdAt;
+	@NotBlank(message = "更新时间不能为空")
 	private Timestamp updatedAt;
 
 	public int getId() {

@@ -2,11 +2,17 @@ package com.subaozuche.model;
 
 import java.sql.Timestamp;
 
+import org.hibernate.validator.constraints.NotBlank;
+
 public class News {
 	private int id;
+	@NotBlank(message = "主题不能为空")
 	private String title;
+	@NotBlank(message = "内容不能为空")
 	private String content;
+	@NotBlank(message = "创建时间不能为空")
 	private Timestamp createdAt;
+	@NotBlank(message = "更新时间不能为空")
 	private Timestamp updatedAt;
 
 	public int getId() {
