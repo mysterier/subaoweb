@@ -17,5 +17,5 @@
 </head>
 <body>
 <div id="wrapper">
-	<#--include "_nav_top.ftl"-->
+	<#include "_nav_top.ftl">
 	<div id="page-wrapper">

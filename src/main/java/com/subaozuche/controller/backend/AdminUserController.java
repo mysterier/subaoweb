@@ -15,7 +15,7 @@ import com.subaozuche.bo.AdminUserBo;
 import com.subaozuche.model.AdminUser;
 
 @Controller
-@RequestMapping("backend/user")
+@RequestMapping("backend/adminuser")
 public class AdminUserController {
 	private static final String VIEW_DIR = "backend/user/";
 	private ModelAndView view = new ModelAndView();
