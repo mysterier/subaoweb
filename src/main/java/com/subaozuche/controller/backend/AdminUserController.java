@@ -59,7 +59,7 @@ public class AdminUserController {
 	
 	@RequestMapping(value = "create", method = RequestMethod.GET)
 	public ModelAndView create() {
-		view.addObject("model", new AdminUser());
+		view.addObject("adminUser", new AdminUser());
 		view.setViewName(VIEW_DIR + "create");
 		return view;
 	}
