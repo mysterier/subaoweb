@@ -16,4 +16,16 @@ public class HomeController {
 		view.setViewName(VIEW_DIR + "index");
 		return view;
 	}
+	
+	@RequestMapping(value = "/order", method = RequestMethod.GET)
+	public ModelAndView orderIndex() {
+		view.setViewName(VIEW_DIR + "order");
+		return view;
+	}
+	
+	@RequestMapping(value = "/reg", method = RequestMethod.GET)
+	public ModelAndView regIndex() {
+		view.setViewName(VIEW_DIR + "reg");
+		return view;
+	}
 }
