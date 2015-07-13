@@ -1,13 +1,10 @@
-<nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
-    <div class="navbar-header">
-        <a class="navbar-brand" href="index.html">${backendPageTitle}</a>
-    </div>
-    <!-- /.navbar-header -->
-
-    <ul class="nav navbar-top-links navbar-right">
-        <li>
-            <a class="dropdown-toggle" href="${backendUrl}/">登 出</a>
-        </li>
-    </ul>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+<div class="container-fluid">
+	<div class="navbar-header"><a href="${backendUrl}" class="navbar-brand">${backendPageTitle}</a></div>
+	<div id="navbar" class="navbar-collapse collapse">
+		<ul class="nav navbar-nav navbar-right">
+			<li><a href="${backendUrl}/logout">登 出</a></li>
+		</ul>
+	</div>
+</div>
 </nav>
- <#include "_nav_left.ftl">

@@ -6,16 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>${backendPageTitle}</title>
-    <!-- Bootstrap Core CSS -->
-    <link href="${url}/admin/css/bootstrap.min.css" rel="stylesheet">
-    <!-- MetisMenu CSS -->
-    <link href="${url}/admin/css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
-    <link href="${url}/admin/css/plugins/timeline.css" rel="stylesheet">
-    <link href="${url}/admin/css/sb-admin-2.css" rel="stylesheet">
-    <link href="${url}/admin/css/plugins/morris.css" rel="stylesheet">
-    <link href="${url}/admin/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="${url}/css/bootstrap.min.css" rel="stylesheet">
+    <link href="${backendUrl}/css/style.css" rel="stylesheet">
 </head>
 <body>
-<div id="wrapper">
-	<#include "_nav_top.ftl">
-	<div id="page-wrapper">
+<#include "_nav_top.ftl">
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-lg-3 col-lg-2 sidebar">
+			<ul class="nav nav-sidebar">
+				<li><a href="${backendUrl}/adminuser/" <#if subMenuId==100 >class="active"</#if>>管理员</a></li>
+				<li><a href="${backendUrl}/client/" <#if subMenuId==104 >class="active"</#if>>用户管理</a></li>
+				<li><a href="${backendUrl}/order/" <#if subMenuId==102 >class="active"</#if>>订单管理</a></li>
+				<li><a href="${backendUrl}/city/" <#if subMenuId==101 >class="active"</#if>>城市管理</a></li>
+				<li><a href="${backendUrl}/news/" <#if subMenuId==103 >class="active"</#if>>新闻管理</a></li>
+			</ul>
+		</div>
+		<div class="col-lg-9 col-lg-offset-3 col-lg-10 col-lg-offset-2 main">
