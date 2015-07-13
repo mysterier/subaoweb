@@ -12,20 +12,26 @@ public class HelperController {
 	private ModelAndView view = new ModelAndView();
 	
 	@RequestMapping(value = "/flow", method = RequestMethod.GET)
-	public ModelAndView flowIndex() {
+	public ModelAndView flowAction() {
 		view.setViewName(VIEW_DIR + "flow");
 		return view;
 	}
 	
 	@RequestMapping(value = "/rule", method = RequestMethod.GET)
-	public ModelAndView ruleIndex() {
+	public ModelAndView ruleAction() {
 		view.setViewName(VIEW_DIR + "rule");
 		return view;
 	}
 	
 	@RequestMapping(value = "/faq", method = RequestMethod.GET)
-	public ModelAndView faqIndex() {
+	public ModelAndView faqAction() {
 		view.setViewName(VIEW_DIR + "faq");
+		return view;
+	}
+	
+	@RequestMapping(value = "/member", method = RequestMethod.GET)
+	public ModelAndView memberAction() {
+		view.setViewName(VIEW_DIR + "member");
 		return view;
 	}
 }
