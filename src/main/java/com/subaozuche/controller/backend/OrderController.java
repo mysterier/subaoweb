@@ -79,7 +79,6 @@ public class OrderController {
 		mOrder.setRentType(order.getRentType());
 		mOrder.setRentOther(order.getRentOther());
 		mOrder.setClientId(order.getClientId());
-		mOrder.setcreatedAt(order.getcreatedAt());
 		orderBo.update(mOrder);
 		return new ModelAndView("redirect:../../");
 	}

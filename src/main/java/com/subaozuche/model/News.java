@@ -10,9 +10,7 @@ public class News {
 	private String title;
 	@NotBlank(message = "内容不能为空")
 	private String content;
-	@NotBlank(message = "创建时间不能为空")
 	private Timestamp createdAt;
-	@NotBlank(message = "更新时间不能为空")
 	private Timestamp updatedAt;
 
 	public int getId() {

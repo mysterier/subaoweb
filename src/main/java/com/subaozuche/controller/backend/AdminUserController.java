@@ -35,27 +35,26 @@ public class AdminUserController {
 		return view;
 	}
 	
-	@RequestMapping(value = "{id}", method = RequestMethod.GET)
+	@RequestMapping(value = "{id}/edit", method = RequestMethod.GET)
 	public ModelAndView edit(@PathVariable int id) {
-		view.addObject("model", adminUserBo.findById(id));
+		view.addObject("adminUser", adminUserBo.findById(id));
 		view.setViewName(VIEW_DIR + "edit");
 		return view;
 	}
 	
-	@RequestMapping(value = "{id}", method = RequestMethod.POST)
+	@RequestMapping(value = "{id}/edit", method = RequestMethod.POST)
 	public ModelAndView update(@PathVariable int id, @Valid @ModelAttribute("adminUser") AdminUser admin,
 			BindingResult bindingResult) {
 		if (bindingResult.hasErrors()) {
-			view.addObject("model", admin);
+			view.addObject("adminUser", admin);
 			view.setViewName(VIEW_DIR + "edit");
 			return view;
 		}
-		
-		AdminUser model = adminUserBo.findById(id);
-		model.setUserName(admin.getUserName());
-		model.setUserPass(admin.getUserPass());
-		adminUserBo.update(model);
-		return new ModelAndView("redirect:./");
+		AdminUser adminUser = adminUserBo.findById(id);
+		adminUser.setUserName(admin.getUserName());
+		adminUser.setUserPass(admin.getUserPass());
+		adminUserBo.update(adminUser);
+		return new ModelAndView("redirect:../");
 	}
 	
 	@RequestMapping(value = "create", method = RequestMethod.GET)
@@ -68,8 +67,8 @@ public class AdminUserController {
 	@RequestMapping(value = "create", method = RequestMethod.POST)
 	public ModelAndView createdo(@Valid @ModelAttribute("adminUser") AdminUser admin, BindingResult bindingResult) {
 		if (bindingResult.hasErrors()) {
-			view.addObject("model", admin);
-			view.setViewName(VIEW_DIR + "edit");
+			view.addObject("adminUser", admin);
+			view.setViewName(VIEW_DIR + "create");
 			return view;
 		}
 		
@@ -77,9 +76,9 @@ public class AdminUserController {
 		return new ModelAndView("redirect:../");
 	}
 	
-	@RequestMapping(value = "del/{id}", method = RequestMethod.GET)
+	@RequestMapping(value = "{id}/delete", method = RequestMethod.GET)
 	public String delete(@PathVariable int id) {
 		adminUserBo.delete(id);
-		return "redirect:../list";
+		return "redirect:../../";
 	}
 }

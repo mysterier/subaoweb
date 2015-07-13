@@ -14,9 +14,7 @@ public class Client {
 	private String clientPass;
 	@NotBlank(message = "邮箱不能为空")
 	private String clientEmail;
-	@NotBlank(message = "创建时间不能为空")
 	private Timestamp createdAt;
-	@NotBlank(message = "更新时间不能为空")
 	private Timestamp updatedAt;
 
 	public int getId() {

@@ -74,8 +74,6 @@ public class NewsController {
 		News mNews = newsBo.findById(id);
 		mNews.setTitle(news.getTitle());
 		mNews.setContent(news.getContent());
-		mNews.setCreatedAt(news.getCreatedAt());
-		mNews.setUpdatedAt(news.getUpdatedAt());
 		newsBo.update(mNews);
 		return new ModelAndView("redirect:../../");
 	}

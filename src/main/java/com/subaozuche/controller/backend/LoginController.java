@@ -33,5 +33,4 @@ public class LoginController {
 		view.setViewName(VIEW_DIR + "index");
 		return view;
 	}
-
 }

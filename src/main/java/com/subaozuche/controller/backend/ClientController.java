@@ -77,8 +77,6 @@ public class ClientController {
 		mClient.setClientName(client.getClientName());
 		mClient.setClientPass(client.getClientPass());
 		mClient.setClientEmail(client.getClientEmail());
-		mClient.setCreatedAt(client.getCreatedAt());
-		mClient.setUpdatedAt(client.getUpdatedAt());
 		clientBo.update(mClient);
 		return new ModelAndView("redirect:../../");
 	}

@@ -34,8 +34,3 @@
 	<div class="col-sm-3"><@spring.formInput "order.clientId", 'class="form-control form-input-sep"' /></div>
 	<@spring.showErrors " "/>
 </div>
-<div class="form-group">
-	<label class="col-lg-2 control-label">创建时间</label>
-	<div class="col-sm-3"><@spring.formInput "order.createdAt", 'class="form-control form-input-sep"' /></div>
-	<@spring.showErrors " "/>
-</div>
