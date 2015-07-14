@@ -69,7 +69,7 @@ public class AdminUserController {
 	public ModelAndView createdo(@Valid @ModelAttribute("adminUser") AdminUser admin, BindingResult bindingResult) {
 		if (bindingResult.hasErrors()) {
 			view.addObject("model", admin);
-			view.setViewName(VIEW_DIR + "edit");
+			view.setViewName(VIEW_DIR + "create");
 			return view;
 		}
 		
