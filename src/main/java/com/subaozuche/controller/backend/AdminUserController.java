@@ -1,7 +1,5 @@
 package com.subaozuche.controller.backend;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
 import org.slf4j.Logger;
@@ -31,13 +29,13 @@ public class AdminUserController extends BaseBackendController {
 	private AdminUserBo adminUserBo;
 	
 	public AdminUserController() {
+		logger.debug("this is AdminUserController Action list=======");
 		view.addObject("menuId", 0);
 		view.addObject("subMenuId", 0);
 	}
 
 	@RequestMapping(value = { "", "list" }, method = RequestMethod.GET)
 	public ModelAndView list() {
-		logger.debug("this is AdminUserController Action list=======");
 		logger.debug("SESSION is " + request.getSession().getAttribute(SessionKeyContent.SESSION_KEY_OBJ_USER_BEAN));
 		view.addObject("users", adminUserBo.findAll());
 		view.setViewName(VIEW_DIR + "list");
