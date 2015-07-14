@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.subaozuche.bo.AdminUserBo;
+import com.subaozuche.comm.utils.Encryption;
 import com.subaozuche.comm.utils.SessionKeyContent;
 import com.subaozuche.controller.core.BaseBackendController;
 import com.subaozuche.model.AdminLoginForm;
@@ -32,8 +33,6 @@ public class LoginController extends BaseBackendController {
 	@RequestMapping(value = { "/", "login" }, method = RequestMethod.GET)
 	public ModelAndView login(Model model) {
 		model.addAttribute("loginForm", new AdminLoginForm());
-		view.addObject("menuId", 1);
-		view.addObject("subMenuId", 100);
 		view.setViewName(VIEW_DIR + "login");
 		return view;
 	}
@@ -42,8 +41,9 @@ public class LoginController extends BaseBackendController {
 	public ModelAndView loginDo(@ModelAttribute("form") AdminLoginForm form) {
 		AdminUser adminUser = adminUserBo.findByUserName(form.getUserName());
 		if (adminUser != null) {
-			if (adminUser.getUserPass().equals(form.getUserPass())) {
+			if (adminUser.getUserPass().equals(Encryption.md5(form.getUserPass()))) {
 				request.getSession().setAttribute(SessionKeyContent.SESSION_KEY_OBJ_USER_BEAN, adminUser.getId());
+				logger.debug("SESSION is " + request.getSession().getAttribute(SessionKeyContent.SESSION_KEY_OBJ_USER_BEAN));
 			} else {
 				return new ModelAndView("redirect:./login");
 			}

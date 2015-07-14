@@ -51,7 +51,7 @@ public class NewsController {
 			return view;
 		}
 		newsBo.add(news);
-		return view;
+		return new ModelAndView("redirect:../");
 	}
 
 	@RequestMapping(value = "{id}/edit", method = RequestMethod.GET)

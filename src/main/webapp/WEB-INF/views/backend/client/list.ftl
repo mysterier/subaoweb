@@ -7,7 +7,6 @@
 			<th>ID</th>
 			<th>手机号</th>
 			<th>用户名</th>
-			<th>密码</th>
 			<th>邮箱</th>
 			<th>创建时间</th>
 			<th>更新时间</th>
@@ -21,7 +20,6 @@
 			<td>${client.id}</td>
 			<td>${client.mobile}</td>
 			<td>${client.clientName}</td>
-			<td>${client.clientPass}</td>
 			<td>${client.clientEmail}</td>
 			<td>${client.createdAt}</td>
 			<td>${client.updatedAt}</td>
