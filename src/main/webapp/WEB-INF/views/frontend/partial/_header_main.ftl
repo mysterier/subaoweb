@@ -19,7 +19,7 @@
 <body>
   <header class="header-wrapper">
     <div class="wrapper">
-      <div class="header-login pull-right"><span><a href="#">登录</a></span>|<span><a href="#">注册</a></span></div>
+      <div class="header-login pull-right"><span><a href="${url}/login/">登录</a></span>|<span><a href=""${url}/reg/>注册</a></span></div>
       <div class="header-tel pull-right"><img src="${url}/img/tel.png"/>400-684-5505</div>
     </div>
   </header>
@@ -44,22 +44,22 @@
         <li><a href="#price">服务价格</a></li>
         <li><a href="#about">服务优势</a></li>
         <li>
-          <a href="news.html">新闻中心</a>
+          <a href="${url}/news/">新闻中心</a>
           <span style="">
-            <a href="industry.html">行业新闻</a>
-            <a href="company.html">公司新闻</a>
-            <a href="activities.html">活动优惠</a>
+            <a href="${url}/industry/">行业新闻</a>
+            <a href="${url}/company/">公司新闻</a>
+            <a href="${url}/activities/">活动优惠</a>
           </span>
         </li>
         <li>
           <a href="#">帮助中心</a>
           <span style="">
-            <a href="flow.html">订车流程</a>
-            <a href="rule.html">服务规则</a>
-            <a href="faq.html">常见问题</a>
+            <a href="${url}/flow/">订车流程</a>
+            <a href="${url}/rule/">服务规则</a>
+            <a href="${url}/faq/">常见问题</a>
           </span>
         </li>
-        <li><a href="order.html">在线订车</a></li>
+        <li><a href="${url}/order/">在线订车</a></li>
       </ul>
     </div>
   </div>
