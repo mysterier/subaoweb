@@ -24,7 +24,8 @@ public interface AdminUserDao {
 
 	public void add(AdminUser user);
 
-	@Update("UPDATE `tbl_admin_user` SET user_name=#{userName}, user_pass=#{userPass}, updated_at=#{updatedAt} WHERE id=#{id}")
+	@Update("UPDATE `tbl_admin_user` SET user_name=#{userName}, user_pass=#{userPass}, updated_at=#{updatedAt} "
+			+ "WHERE id=#{id}")
 	public void update(AdminUser user);
 
 	@Delete("DELETE FROM tbl_admin_user WHERE id=#{id}")

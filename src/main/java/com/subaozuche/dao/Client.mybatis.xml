@@ -3,7 +3,7 @@
 <mapper namespace="com.subaozuche.dao.ClientDao">
 	<insert id="add" useGeneratedKeys="true" keyProperty="id">
 		INSERT INTO
-		tbl_client (mobile, client_name, client_pass, client_email, created_at, updated_at) VALUES
-		(#{mobile}, #{clientName}, #{clientPass}, #{clientEmail}, #{createdAt}, #{updatedAt})
+		tbl_client (mobile, client_name, client_pass, client_email) VALUES
+		(#{mobile}, #{clientName}, #{clientPass}, #{clientEmail})
 	</insert>
 </mapper>

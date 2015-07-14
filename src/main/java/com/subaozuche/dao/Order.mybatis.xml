@@ -4,8 +4,7 @@
 	<insert id="add" useGeneratedKeys="true" keyProperty="id">
 		INSERT INTO
 		tbl_order (city_id, rent_time, contact_name, contact_phone, rent_type,
-		rent_other, client_id, created_at) VALUES (#{cityId}, #{rentTime} ,
-		#{contactName}, #{contactPhone}, #{rentType}, #{rentOther},
-		#{clientId}, #{createdAt})
+		rent_other, client_id) VALUES (#{cityId}, #{rentTime} ,#{contactName},
+		#{contactPhone}, #{rentType}, #{rentOther}, #{clientId})
 	</insert>
 </mapper>

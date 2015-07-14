@@ -2,24 +2,22 @@ package com.subaozuche.model;
 
 import java.sql.Timestamp;
 
+import javax.validation.constraints.Future;
+
 import org.hibernate.validator.constraints.NotBlank;
 
 public class Order {
 	private int id;
-	@NotBlank(message = "城市Id不能为空")
 	private int cityId;
-	@NotBlank(message = "城市Id不能为空")
+	@Future(message = "请输入正确的用车时间")
 	private Timestamp rentTime;
 	@NotBlank(message = "联系人不能为空")
 	private String contactName;
 	@NotBlank(message = "联系电话不能为空")
 	private String contactPhone;
-	@NotBlank(message = "车型不能为空")
 	private int rentType;
 	private String rentOther;
-	@NotBlank(message = "用户id不能为空")
 	private int clientId;
-	@NotBlank(message = "创建时间不能为空")
 	private Timestamp createdAt;
 
 	public int getId() {

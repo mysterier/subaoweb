@@ -19,8 +19,8 @@ public interface ClientDao {
 
 	public void add(Client client);
 
-	@Update("UPDATE tbl_client SET mobile=#{mobile}, client_name=#{clientName}, client_pass=#}{clientPass}, "
-			+ "client_email=#{clientEmail}, created_at=#{createdAt}, updated_at=#{updatedAt} WHERE id=#{id}")
+	@Update("UPDATE tbl_client SET mobile=#{mobile}, client_name=#{clientName}, client_pass=#{clientPass}, "
+			+ "client_email=#{clientEmail}, updated_at=#{updatedAt} WHERE id=#{id}")
 	public void update(Client client);
 
 	@Delete("DELETE FROM tbl_client WHERE id=#{id}")

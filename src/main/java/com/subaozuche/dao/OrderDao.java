@@ -23,8 +23,8 @@ public interface OrderDao {
 	public void add(Order order);
 
 	@Update("UPDATE tbl_order SET city_id=#{cityId}, rent_time=#{rentTime}, contact_name=#{contactName},  "
-			+ "contact_phone=#{contactPhone}, rent_type=#{rentType}, rent_other=#{rentOther}, client_id=#{clientId}, "
-			+ "created_at=#{createdAt} WHERE id=#{id}")
+			+ "contact_phone=#{contactPhone}, rent_type=#{rentType}, rent_other=#{rentOther}, client_id=#{clientId} "
+			+ "WHERE id=#{id}")
 	public void update(Order order);
 
 	@Delete("DELETE FROM tbl_order WHERE id=#{id}")

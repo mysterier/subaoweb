@@ -17,8 +17,7 @@ public interface NewsDao {
 
 	public void add(News news);
 
-	@Update("UPDATE tbl_news SET title=#{title}, content=#{content}, created_at=#{createdAt},"
-			+ " updated_at=#{updatedAt} WHERE id=#{id}")
+	@Update("UPDATE tbl_news SET title=#{title}, content=#{content}, updated_at=#{updatedAt} WHERE id=#{id}")
 	public void update(News news);
 
 	@Delete("DELETE FROM tbl_news WHERE id=#{id}")

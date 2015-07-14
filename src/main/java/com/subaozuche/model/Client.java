@@ -2,6 +2,7 @@ package com.subaozuche.model;
 
 import java.sql.Timestamp;
 
+import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotBlank;
 
 public class Client {
@@ -12,11 +13,10 @@ public class Client {
 	private String clientName;
 	@NotBlank(message = "用户密码不能为空")
 	private String clientPass;
-	@NotBlank(message = "邮箱不能为空")
+	@NotBlank(message = "邮箱地址不能为空")
+	@Email(message = "请输入正确的邮箱地址")
 	private String clientEmail;
-	@NotBlank(message = "创建时间不能为空")
 	private Timestamp createdAt;
-	@NotBlank(message = "更新时间不能为空")
 	private Timestamp updatedAt;
 
 	public int getId() {
