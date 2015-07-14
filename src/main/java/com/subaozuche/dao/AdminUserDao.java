@@ -17,6 +17,10 @@ public interface AdminUserDao {
 	@Select("SELECT id, user_name AS userName, user_pass AS userPass, updated_at AS updatedAt "
 			+ "FROM `tbl_admin_user` WHERE id=#{id} ")
 	public AdminUser findById(int id);
+	
+	@Select("SELECT id, user_name AS userName, user_pass AS userPass, updated_at AS updatedAt "
+			+ "FROM `tbl_admin_user` WHERE user_name=#{userName} ")
+	public AdminUser findByUserName(String userName);
 
 	@Select("SELECT id, user_name AS userName, user_pass AS userPass, updated_at AS updatedAt "
 			+ "FROM `tbl_admin_user`")

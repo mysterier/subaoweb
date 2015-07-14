@@ -14,6 +14,7 @@
 	<context:component-scan base-package="com.subaozuche.dao" />
 
 	<!-- enable component scanning (of presentation layer only) -->
+	<context:component-scan base-package="com.subaozuche.controller.core" />
 	<context:component-scan base-package="com.subaozuche.controller" />
 	<context:component-scan base-package="com.subaozuche.controller.backend" />
 

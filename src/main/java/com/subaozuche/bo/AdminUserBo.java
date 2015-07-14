@@ -14,4 +14,6 @@ public interface AdminUserBo {
 	public void update(AdminUser user);
 
 	public void delete(int id);
+	
+	public AdminUser findByUserName(String userName);
 }

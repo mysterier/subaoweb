@@ -38,4 +38,9 @@ public class AdminUserBoImpl implements AdminUserBo {
 		adminUserDao.delete(id);
 	}
 
+	@Override
+	public AdminUser findByUserName(String userName) {
+		return adminUserDao.findByUserName(userName);
+	}
+
 }

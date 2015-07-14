@@ -13,6 +13,7 @@
 		</layout>
 	</appender>
 
+	<logger name="com.subaozuche.controller.core" level="DEBUG"/>
 	<logger name="com.subaozuche.controller" level="DEBUG"/>
 	<logger name="com.subaozuche.controller.backend" level="DEBUG"/>
 

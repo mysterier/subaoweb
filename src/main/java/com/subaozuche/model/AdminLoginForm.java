@@ -27,5 +27,4 @@ public class AdminLoginForm implements Serializable {
 	public void setUserPass(String userPass) {
 		this.userPass = userPass;
 	}
-
 }

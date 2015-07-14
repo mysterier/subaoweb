@@ -1,7 +1,11 @@
 package com.subaozuche.controller.backend;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -12,17 +16,20 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.subaozuche.bo.AdminUserBo;
+import com.subaozuche.comm.utils.SessionKeyContent;
+import com.subaozuche.controller.core.BaseBackendController;
 import com.subaozuche.model.AdminUser;
 
 @Controller
 @RequestMapping("backend/adminuser")
-public class AdminUserController {
+public class AdminUserController extends BaseBackendController {
+	private static Logger logger = LoggerFactory.getLogger(AdminUserController.class);
 	private static final String VIEW_DIR = "backend/user/";
 	private ModelAndView view = new ModelAndView();
 
 	@Autowired
 	private AdminUserBo adminUserBo;
-
+	
 	public AdminUserController() {
 		view.addObject("menuId", 0);
 		view.addObject("subMenuId", 0);
@@ -30,6 +37,8 @@ public class AdminUserController {
 
 	@RequestMapping(value = { "", "list" }, method = RequestMethod.GET)
 	public ModelAndView list() {
+		logger.debug("this is AdminUserController Action list=======");
+		logger.debug("SESSION is " + request.getSession().getAttribute(SessionKeyContent.SESSION_KEY_OBJ_USER_BEAN));
 		view.addObject("users", adminUserBo.findAll());
 		view.setViewName(VIEW_DIR + "list");
 		return view;

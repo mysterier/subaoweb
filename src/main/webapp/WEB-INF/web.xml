@@ -62,4 +62,13 @@
 		<error-code>400</error-code>
 		<location>/error/400</location>
 	</error-page>
+
+	<filter>
+		<filter-name>sessionFilter</filter-name>
+		<filter-class>com.subaozuche.comm.filter.SessionFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>sessionFilter</filter-name>
+		<url-pattern>/backend/*</url-pattern>
+	</filter-mapping>
 </web-app>

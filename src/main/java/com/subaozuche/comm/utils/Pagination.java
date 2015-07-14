@@ -1,4 +1,4 @@
-package com.subaozuche.utils;
+package com.subaozuche.comm.utils;
 
 import java.util.List;
 
