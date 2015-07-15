@@ -47,9 +47,9 @@ public class ServiceController {
 		return view;
 	}
 	
-	@RequestMapping(value = "service-huiqing", method = RequestMethod.GET)
+	@RequestMapping(value = "service-hunqing", method = RequestMethod.GET)
 	public ModelAndView huiqing() {
-		view.setViewName(VIEW_DIR + "huiqing");
+		view.setViewName(VIEW_DIR + "hunqing");
 		return view;
 	}
 }
