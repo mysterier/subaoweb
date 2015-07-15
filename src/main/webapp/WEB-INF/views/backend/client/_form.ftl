@@ -11,7 +11,7 @@
 </div>
 <div class="form-group">
 	<label class="col-lg-2 control-label">密码</label>
-	<div class="col-sm-3"><@spring.formInput "client.clientPass", 'class="form-control form-input-sep"'/></div>
+	<div class="col-sm-3"><@spring.formPasswordInput "client.clientPass", 'class="form-control form-input-sep"'/></div>
 	<@spring.showErrors " "/>
 </div>
 <div class="form-group">

@@ -51,7 +51,7 @@ public class OrderController {
 			return view;
 		}
 		orderBo.add(order);
-		return view;
+		return new ModelAndView("redirect:../");
 	}
 
 	@RequestMapping(value = "{id}/edit", method = RequestMethod.GET)

@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.subaozuche.bo.ClientBo;
+import com.subaozuche.comm.utils.Encryption;
 import com.subaozuche.model.Client;
 
 @Controller
@@ -51,8 +52,9 @@ public class ClientController {
 			view.setViewName(VIEW_DIR + "create");
 			return view;
 		}
+		client.setClientPass(Encryption.md5(client.getClientPass()));
 		clientBo.add(client);
-		return view;
+		return new ModelAndView("redirect:../");
 	}
 
 	@RequestMapping(value = "{id}/edit", method = RequestMethod.GET)
@@ -75,7 +77,7 @@ public class ClientController {
 		Client mClient = clientBo.findById(id);
 		mClient.setMobile(client.getMobile());
 		mClient.setClientName(client.getClientName());
-		mClient.setClientPass(client.getClientPass());
+		mClient.setClientPass(Encryption.md5(client.getClientPass()));
 		mClient.setClientEmail(client.getClientEmail());
 		clientBo.update(mClient);
 		return new ModelAndView("redirect:../../");
