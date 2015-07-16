@@ -12,38 +12,6 @@ public class InforController {
 	private static final String VIEW_DIR = "frontend/infor/";
 	private ModelAndView view = new ModelAndView();
 	
-	@RequestMapping(value = "/news", method = RequestMethod.GET)
-	public ModelAndView newsAction() {
-		view.setViewName(VIEW_DIR + "news");
-		return view;
-	}
-	
-	@RequestMapping(value = "/news/{title}", method = RequestMethod.GET)
-	public ModelAndView newsDetailAction(@PathVariable String title) {
-		view.setViewName(VIEW_DIR + "news_detail");
-		view.addObject(title);
-		return view;
-	}
-	
-	@RequestMapping(value = "/industry", method = RequestMethod.GET)
-	public ModelAndView industryAction() {
-		view.setViewName(VIEW_DIR + "industry");
-		return view;
-	}
-	
-	@RequestMapping(value = "/industry/{title}", method = RequestMethod.GET)
-	public ModelAndView industryDetailAction(@PathVariable String title) {
-		view.addObject(title);
-		view.setViewName(VIEW_DIR + "industry_detail");
-		return view;
-	}
-	
-	@RequestMapping(value = "/company", method = RequestMethod.GET)
-	public ModelAndView companyAction() {
-		view.setViewName(VIEW_DIR + "company");
-		return view;
-	}
-	
 	@RequestMapping(value = "/activities", method = RequestMethod.GET)
 	public ModelAndView activitiesAction() {
 		view.setViewName(VIEW_DIR + "activities");

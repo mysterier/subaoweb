@@ -14,6 +14,11 @@ public interface OrderDao {
 			+ "contact_phone AS contactPhone, rent_type AS rentType, rent_other AS rentOther, "
 			+ "client_id AS clientId, created_at AS createdAt FROM tbl_order WHERE id=#{id}")
 	public Order findById(int id);
+	
+	@Select("SELECT id, city_id AS cityId, rent_time AS rentTime, contact_name AS contactName, "
+			+ "contact_phone AS contactPhone, rent_type AS rentType, rent_other AS rentOther, "
+			+ "client_id AS clientId, created_at AS createdAt FROM tbl_order WHERE client_id=#{clientId}")
+	public List<Order> findByClientId(int clientId);
 
 	@Select("SELECT id, city_id AS cityId, rent_time AS rentTime, contact_name AS contactName, "
 			+ "contact_phone AS contactPhone, rent_type AS rentType, rent_other AS rentOther, "

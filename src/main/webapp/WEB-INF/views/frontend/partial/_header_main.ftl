@@ -29,7 +29,7 @@
     <div id="logo"><img src="${url}/img/logo.png"></div>
     <div id="nav">
       <ul id="topnav">
-        <li class="nav-select"><a href="${url}/index.html">首页</a></li>
+        <li class="nav-select"><a href="${url}/index">首页</a></li>
         <li>
           <a href="#project">服务项目</a>
           <span>

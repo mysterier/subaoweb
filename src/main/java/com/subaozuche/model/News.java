@@ -2,6 +2,9 @@ package com.subaozuche.model;
 
 import java.sql.Timestamp;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+
 import org.hibernate.validator.constraints.NotBlank;
 
 public class News {
@@ -12,6 +15,9 @@ public class News {
 	private String content;
 	private Timestamp createdAt;
 	private Timestamp updatedAt;
+	@Min(0)
+	@Max(1)
+	private int type;
 
 	public int getId() {
 		return id;
@@ -53,9 +59,18 @@ public class News {
 		this.updatedAt = updatedAt;
 	}
 
+	public int getType() {
+		return type;
+	}
+
+	public void setType(int type) {
+		this.type = type;
+	}
+	
 	@Override
 	public String toString() {
 		return "News [id=" + id + ", title=" + title + ", content=" + content
-				+ ", createdAt=" + createdAt + ", updatedAt=" + updatedAt + "]";
+				+ ", createdAt=" + createdAt + ", updatedAt=" + updatedAt
+				+ ", type=" + type + "]";
 	}
 }

@@ -1,5 +1,8 @@
 package com.subaozuche.controller.backend;
 
+import java.util.LinkedHashMap;
+import java.util.Map;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,6 +40,10 @@ public class NewsController {
 
 	@RequestMapping(value = "create", method = RequestMethod.GET)
 	public ModelAndView create() {
+		Map<String, String> options = new LinkedHashMap<String, String>();
+		options.put("0", "行业新闻");
+		options.put("1", "公司新闻");
+		view.addObject("options", options);
 		view.addObject("news", new News());
 		view.setViewName(VIEW_DIR + "create");
 		return view;
