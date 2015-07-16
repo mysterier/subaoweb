@@ -14,5 +14,7 @@ public interface ClientBo {
 	public void update(Client client);
 
 	public void delete(int id);
+	
+	public Client findByClientName(String clientName);
 
 }

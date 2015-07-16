@@ -23,6 +23,7 @@ public class SessionFilter extends OncePerRequestFilter {
 
 		// 请求的uri
 		String uri = request.getRequestURI();
+		
 		// 是否过滤
 		boolean doFilter = true;
 		for (String s : notFilter) {
@@ -36,7 +37,10 @@ public class SessionFilter extends OncePerRequestFilter {
 		if (doFilter) {
 			// 执行过滤
 			// 从session中获取登录者实体
-			Object obj = request.getSession().getAttribute(SessionKeyContent.SESSION_KEY_OBJ_USER_BEAN);
+			String user = (uri.indexOf("/backend") != -1) ? SessionKeyContent.SESSION_KEY_OBJ_USER_BEAN : SessionKeyContent.SESSION_KEY_OBJ_CLIENT_BEAN;
+			String redirect = (uri.indexOf("/backend") != -1) ? "/subaoweb/backend/login/" : "/subaoweb/";
+
+			Object obj = request.getSession().getAttribute(user);
 			if (null == obj) {
 				boolean isAjaxRequest = isAjaxRequest(request);
 				if (isAjaxRequest) {
@@ -44,7 +48,7 @@ public class SessionFilter extends OncePerRequestFilter {
 					response.sendError(HttpStatus.UNAUTHORIZED.value(), "您已经太长时间没有操作,请刷新页面");
 					return;
 				}
-				response.sendRedirect("/subaoweb/backend/login/");
+				response.sendRedirect(redirect);
 				return;
 			} else {
 				// 如果session中存在登录者实体，则继续

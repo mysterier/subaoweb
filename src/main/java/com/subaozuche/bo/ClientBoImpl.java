@@ -38,4 +38,9 @@ public class ClientBoImpl implements ClientBo{
 	public void delete(int id) {
 		clientDao.delete(id);
 	}
+	
+	@Override
+	public Client findByClientName(String clientName) {
+		return clientDao.findByClientName(clientName);
+	}
 }

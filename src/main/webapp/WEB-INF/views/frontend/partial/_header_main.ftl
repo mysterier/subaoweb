@@ -20,7 +20,7 @@
 <body>
   <header class="header-wrapper">
     <div class="wrapper">
-      <div class="header-login pull-right"><span><a href="${url}/login/">登录</a></span>|<span><a href=""${url}/reg/>注册</a></span></div>
+      <div class="header-login pull-right"><span><a href="#" class="login-top">登录</a></span>|<span><a href="${url}/reg/">注册</a></span></div>
       <div class="header-tel pull-right"><img src="${url}/img/tel.png"/>400-684-5505</div>
     </div>
   </header>
@@ -29,7 +29,7 @@
     <div id="logo"><img src="${url}/img/logo.png"></div>
     <div id="nav">
       <ul id="topnav">
-        <li class="nav-select"><a href="${url}/index.html">首页</a></li>
+        <li class="nav-select"><a href="${url}/">首页</a></li>
         <li>
           <a href="#project">服务项目</a>
           <span>

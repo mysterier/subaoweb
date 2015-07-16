@@ -25,4 +25,8 @@ public interface ClientDao {
 
 	@Delete("DELETE FROM tbl_client WHERE id=#{id}")
 	public void delete(int id);
+	
+	@Select("SELECT id, client_name AS clientName, client_pass AS clientPass, updated_at AS updatedAt "
+			+ "FROM `tbl_client` WHERE client_name=#{clientName} ")
+	public Client findByClientName(String clientName);
 }
