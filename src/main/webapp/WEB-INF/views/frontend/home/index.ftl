@@ -137,22 +137,4 @@
   </div>
   <div class="clearfix"></div>
 </div>
-
-<!-- login -->
-<div class="theme-popover">
-     <div class="theme-poptit">
-          <a href="javascript:;" title="关闭" class="close">×</a>
-     </div>
-     <div class="theme-popbod dform">
-           <form class="theme-signin" name="loginform" action="${url}/login" method="post">
-                <ul>
-                     <li><h4>欢迎登陆</h4></li>
-                     <li><strong>用户名：</strong><input class="ipt" type="text" name="log" value="" size="24" /></li>
-                     <li><strong>密码：</strong><input class="ipt" type="password" name="pwd" value="" size="24" /></li>
-                     <li><input class="btn blue-btn" type="submit" name="submit" value="登 录 " /></li>
-                </ul>
-           </form>
-     </div>
-</div>
-<div class="theme-popover-mask"></div>
 <#include "../partial/_footer_main.ftl">

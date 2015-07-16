@@ -2,14 +2,17 @@ package com.subaozuche.model;
 
 import java.sql.Timestamp;
 
+import javax.validation.constraints.Pattern;
+
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotBlank;
 
 public class Client {
 	private int id;
-	@NotBlank(message = "手机号不能为空")
+	@Pattern(regexp="^(?:(?:1(?:3[4-9]|5[012789]|8[78])[0-9]{8}|1(?:3[0-2]|5[56]|8[56])[0-9]{8}|18[0-9][0-9]{8}|1[35]3[0-9]{8})|14[57][0-9]{8}|170[059][0-9]{7}|17[67][0-9]{8})$", message="手机格式错误")
 	private String mobile;
 	@NotBlank(message = "用户名不能为空")
+	//todo 登录名唯一验证
 	private String clientName;
 	@NotBlank(message = "用户密码不能为空")
 	private String clientPass;
@@ -18,6 +21,8 @@ public class Client {
 	private String clientEmail;
 	private Timestamp createdAt;
 	private Timestamp updatedAt;
+	
+	private String passAgain;
 
 	public int getId() {
 		return id;
@@ -75,11 +80,19 @@ public class Client {
 		this.updatedAt = updatedAt;
 	}
 
+	public String getPassAgain() {
+		return passAgain;
+	}
+
+	public void setPassAgain(String passAgain) {
+		this.passAgain = passAgain;
+	}
+
 	@Override
 	public String toString() {
 		return "Client [id=" + id + ", mobile=" + mobile + ", clientName="
 				+ clientName + ", clientPass=" + clientPass + ", clientEmail="
 				+ clientEmail + ", createdAt=" + createdAt + ", updatedAt="
-				+ updatedAt + "]";
+				+ updatedAt + ", passAgain=" + passAgain + "]";
 	}
 }

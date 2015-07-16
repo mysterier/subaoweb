@@ -18,9 +18,32 @@
 </head>
 
 <body>
+<!-- login -->
+<div class="theme-popover">
+     <div class="theme-poptit">
+          <a href="javascript:;" title="关闭" class="close">×</a>
+     </div>
+     <div class="theme-popbod dform">
+           <form class="theme-signin" name="loginform" action="${url}/login" method="post">
+                <ul>
+                     <li><h4>欢迎登陆</h4></li>
+                     <li><strong>用户名：</strong><input class="ipt" type="text" name="clientName" value="" size="24" /></li>
+                     <li><strong>密码：</strong><input class="ipt" type="password" name="clientPass" value="" size="24" /></li>
+                     <li><input class="btn blue-btn" type="submit" name="submit" value="登 录 " /></li>
+                </ul>
+           </form>
+     </div>
+</div>
+<div class="theme-popover-mask"></div>
   <header class="header-wrapper">
     <div class="wrapper">
-      <div class="header-login pull-right"><span><a href="#" class="login-top">登录</a></span>|<span><a href="${url}/reg/">注册</a></span></div>
+      <div class="header-login pull-right">
+      		<#if Session.client_user?exists>
+			<span><a href="${url}/user/" class="login-top">个人中心</a></span>|<span><a href="${url}/logout/">登出</a></span>
+			<#else>
+			<span><a href="#" class="login-top">登录</a></span>|<span><a href="${url}/reg/">注册</a></span>
+			</#if>
+		</div>
       <div class="header-tel pull-right"><img src="${url}/img/tel.png"/>400-684-5505</div>
     </div>
   </header>
