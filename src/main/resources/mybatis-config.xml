@@ -9,6 +9,8 @@
 		<typeAlias alias="Order" type="com.subaozuche.model.Order" />
 		<typeAlias alias="News" type="com.subaozuche.model.News" />
 		<typeAlias alias="Client" type="com.subaozuche.model.Client" />
+		<typeAlias alias="Recruit" type="com.subaozuche.model.Recruit" />
+		<typeAlias alias="Activity" type="com.subaozuche.model.Activity" />
 	</typeAliases>
 
 	<mappers>
@@ -17,6 +19,8 @@
 		<mapper resource="com/subaozuche/dao/Order.mybatis.xml" />
 		<mapper resource="com/subaozuche/dao/News.mybatis.xml" />
 		<mapper resource="com/subaozuche/dao/Client.mybatis.xml" />
+		<mapper resource="com/subaozuche/dao/Recruit.mybatis.xml" />
+		<mapper resource="com/subaozuche/dao/Activity.mybatis.xml" />
 	</mappers>
 
 </configuration>
