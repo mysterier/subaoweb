@@ -1,8 +1,5 @@
 package com.subaozuche.controller.backend;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
-
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,80 +11,77 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.subaozuche.bo.NewsBo;
-import com.subaozuche.model.News;
+import com.subaozuche.bo.RecruitBo;
+import com.subaozuche.model.Recruit;
 
 @Controller
-@RequestMapping("backend/news")
-public class NewsController {
-	private static final String VIEW_DIR = "backend/news/";
+@RequestMapping("backend/recruit")
+public class RecruitController {
+	private static final String VIEW_DIR = "backend/recruit/";
 	private ModelAndView view = new ModelAndView();
 
 	@Autowired
-	private NewsBo newsBo;
+	private RecruitBo recruitBo;
 
-	public NewsController() {
+	public RecruitController() {
 		view.addObject("menuId", 1);
-		view.addObject("subMenuId", 103);
+		view.addObject("subMenuId", 105);
 	}
 
 	@RequestMapping(value = { "", "list" }, method = RequestMethod.GET)
 	public ModelAndView list() {
-		view.addObject("newses", newsBo.findAll());
+		view.addObject("recruits", recruitBo.findAll());
 		view.setViewName(VIEW_DIR + "list");
 		return view;
 	}
 
 	@RequestMapping(value = "create", method = RequestMethod.GET)
 	public ModelAndView create() {
-		Map<String, String> options = new LinkedHashMap<String, String>();
-		options.put("0", "行业新闻");
-		options.put("1", "公司新闻");
-		view.addObject("options", options);
-		view.addObject("news", new News());
+		view.addObject("recruit", new Recruit());
 		view.setViewName(VIEW_DIR + "create");
 		return view;
 	}
 
 	@RequestMapping(value = "create", method = RequestMethod.POST)
-	public ModelAndView createDo(@Valid @ModelAttribute("news") News news,
+	public ModelAndView createDo(
+			@Valid @ModelAttribute("recruit") Recruit recruit,
 			BindingResult bindingResult) {
 		if (bindingResult.hasErrors()) {
-			view.addObject("news", news);
+			view.addObject("recruit", recruit);
 			view.setViewName(VIEW_DIR + "create");
 			return view;
 		}
-		newsBo.add(news);
+		recruitBo.add(recruit);
 		return new ModelAndView("redirect:../");
 	}
 
 	@RequestMapping(value = "{id}/edit", method = RequestMethod.GET)
 	public ModelAndView update(@PathVariable int id) {
-		view.addObject("news", newsBo.findById(id));
+		view.addObject("recruit", recruitBo.findById(id));
 		view.setViewName(VIEW_DIR + "edit");
 		return view;
 	}
 
 	@RequestMapping(value = "{id}/edit", method = RequestMethod.POST)
 	public ModelAndView updateDo(@PathVariable int id,
-			@Valid @ModelAttribute("news") News news,
+			@Valid @ModelAttribute("recruit") Recruit recruit,
 			BindingResult bindingResult) {
 		if (bindingResult.hasErrors()) {
-			view.addObject("news", news);
+			view.addObject("recruit", recruit);
 			view.setViewName(VIEW_DIR + "edit");
 			return view;
 		}
 
-		News mNews = newsBo.findById(id);
-		mNews.setTitle(news.getTitle());
-		mNews.setContent(news.getContent());
-		newsBo.update(mNews);
+		Recruit mRecruit = recruitBo.findById(id);
+		mRecruit.setTitle(recruit.getTitle());
+		mRecruit.setContent(recruit.getContent());
+		recruitBo.update(mRecruit);
 		return new ModelAndView("redirect:../../");
 	}
 
 	@RequestMapping(value = "{id}/delete", method = RequestMethod.GET)
 	public String delete(@PathVariable int id) {
-		newsBo.delete(id);
+		recruitBo.delete(id);
 		return "redirect:../../";
 	}
 

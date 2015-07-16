@@ -18,6 +18,12 @@ public class OrderBoImpl implements OrderBo {
 	public Order findById(int id) {
 		return orderDao.findById(id);
 	}
+	
+	@Override
+	public List<Order> findByClientId(int clientId) {
+		return orderDao.findByClientId(clientId);
+	}
+
 
 	@Override
 	public List<Order> findAll() {
@@ -38,5 +44,4 @@ public class OrderBoImpl implements OrderBo {
 	public void delete(int id) {
 		orderDao.delete(id);
 	}
-
 }

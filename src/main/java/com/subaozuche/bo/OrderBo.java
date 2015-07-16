@@ -6,6 +6,8 @@ import com.subaozuche.model.Order;
 
 public interface OrderBo {
 	public Order findById(int id);
+	
+	public List<Order> findByClientId(int clientId);
 
 	public List<Order> findAll();
 

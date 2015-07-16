@@ -6,6 +6,10 @@ import com.subaozuche.model.News;
 
 public interface NewsBo {
 	public News findById(int id);
+	
+	public List<News> findByType(int type);
+	
+	public News findByTitle(String title);
 
 	public List<News> findAll();
 

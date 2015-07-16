@@ -18,6 +18,16 @@ public class NewsBoImpl implements NewsBo {
 	public News findById(int id) {
 		return newsDao.findById(id);
 	}
+	
+	@Override
+	public List<News> findByType(int type) {
+		return newsDao.findByType(type);
+	}
+	
+	@Override
+	public News findByTitle(String title) {
+		return newsDao.findByTitle(title);
+	}
 
 	@Override
 	public List<News> findAll() {
@@ -38,5 +48,4 @@ public class NewsBoImpl implements NewsBo {
 	public void delete(int id) {
 		newsDao.delete(id);
 	}
-
 }

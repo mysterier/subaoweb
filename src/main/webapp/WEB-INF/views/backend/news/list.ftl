@@ -5,6 +5,7 @@
 	<thead>
 		<tr>
 			<th>ID</th>
+			<th>类型</th>
 			<th>标题</th>
 			<th>内容</th>
 			<th>创建时间</th>
@@ -17,6 +18,7 @@
 	<#list newses as news>
 		<tr>
 			<td>${news.id}</td>
+			<td>${news.type}</td>
 			<td>${news.title}</td>
 			<td>${news.content}</td>
 			<td>${news.createdAt}</td>
