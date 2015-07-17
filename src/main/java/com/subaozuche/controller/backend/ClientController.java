@@ -1,5 +1,8 @@
 package com.subaozuche.controller.backend;
 
+import java.sql.Timestamp;
+import java.util.Date;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -79,6 +82,7 @@ public class ClientController {
 		mClient.setClientName(client.getClientName());
 		mClient.setClientPass(Encryption.md5(client.getClientPass()));
 		mClient.setClientEmail(client.getClientEmail());
+		mClient.setUpdatedAt(new Timestamp(new Date().getTime()));
 		clientBo.update(mClient);
 		return new ModelAndView("redirect:../../");
 	}

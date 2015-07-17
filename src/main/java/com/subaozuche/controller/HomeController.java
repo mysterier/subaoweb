@@ -31,10 +31,10 @@ import com.subaozuche.model.Order;
 public class HomeController {
 	private static final String VIEW_DIR = "frontend/home/";
 	private ModelAndView view = new ModelAndView();
-	private Map<String, String> options;
+	private Map<String, String> options = ViewObjectInforHelper.getOrderTypes();;
 	@Autowired
 	protected HttpServletRequest request;
-	
+
 	@Autowired
 	private ClientBo clientBo;
 
@@ -52,7 +52,6 @@ public class HomeController {
 
 	@RequestMapping(value = "/order", method = RequestMethod.GET)
 	public ModelAndView orderIndex() {
-		options = ViewObjectInforHelper.getOrderTypes();
 		view.addObject("options", options);
 		view.addObject("newses", newsBo.findAll());
 		view.addObject("order", new Order());
@@ -74,23 +73,27 @@ public class HomeController {
 
 	@RequestMapping(value = "/reg", method = RequestMethod.GET)
 	public ModelAndView regIndex() {
+		view.addObject("options", options);
 		view.addObject("client", new Client());
 		view.setViewName(VIEW_DIR + "reg");
 		return view;
 	}
-	
+
 	@RequestMapping(value = "/logo_res", method = RequestMethod.GET)
 	public ModelAndView logoRes() {
 		view.setViewName(VIEW_DIR + "logo_res");
 		return view;
 	}
-	
+
 	@RequestMapping(value = { "/", "login" }, method = RequestMethod.POST)
 	public ModelAndView loginDo(@ModelAttribute("form") ClientLoginForm form) {
 		Client client = clientBo.findByClientName(form.getClientName());
 		if (client != null) {
-			if (client.getClientPass().equals(Encryption.md5(form.getClientPass()))) {
-				request.getSession().setAttribute(SessionKeyContent.SESSION_KEY_OBJ_CLIENT_BEAN, client.getId());
+			if (client.getClientPass().equals(
+					Encryption.md5(form.getClientPass()))) {
+				request.getSession().setAttribute(
+						SessionKeyContent.SESSION_KEY_OBJ_CLIENT_BEAN,
+						client.getId());
 				return new ModelAndView("redirect:/");
 			} else {
 				return new ModelAndView("redirect:/logo_res");
@@ -99,13 +102,13 @@ public class HomeController {
 			return new ModelAndView("redirect:/logo_res");
 		}
 	}
-	
+
 	@RequestMapping(value = "/logout", method = RequestMethod.GET)
 	public String logoutDo() {
 		request.getSession().invalidate();
 		return "redirect:/";
 	}
-	
+
 	@RequestMapping(value = "/reg", method = RequestMethod.POST)
 	public ModelAndView regDo(@Valid @ModelAttribute("client") Client client,
 			BindingResult bindingResult) {

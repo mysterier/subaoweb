@@ -5,6 +5,7 @@ import java.util.Map;
 
 public class ViewObjectInforHelper {
 	private static Map<String, String> orderTypes;
+	private static Map<String, String> newsTypes;
 
 	public static Map<String, String> getOrderTypes() {
 		if (null == orderTypes || orderTypes.size() <= 0) {
@@ -15,5 +16,14 @@ public class ViewObjectInforHelper {
 			orderTypes.put("4", "其它");
 		}
 		return orderTypes;
+	}
+
+	public static Map<String, String> getNewsTypes() {
+		if (null == newsTypes || newsTypes.size() <= 0) {
+			newsTypes = new LinkedHashMap<String, String>();
+			newsTypes.put("0", "行业新闻");
+			newsTypes.put("1", "公司新闻");
+		}
+		return newsTypes;
 	}
 }

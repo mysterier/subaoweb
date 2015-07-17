@@ -33,23 +33,7 @@
         <button type="submit" class="btn blue-btn btn-block btn-lg">确认注册</button>
       </form>
     </div>
-    <div class="order-right col-md-offset-1 col-md-5">
-      <p class="gray-darker">我已有账号，可直接登陆</p>
-      <button type="button" class="btn blue-btn btn-block btn-lg">立即登陆</button>
-      <p class="gray-darker">随便看看</p>
-      <div class="order-look">
-        <a href="#"><div></div><p>上海哪家租车公司好，选苏宝公司</p></a>
-        <a href="#"><div></div><p>上海哪家租车公司好，选苏宝公司</p></a>
-        <a href="#"><div></div><p>上海哪家租车公司好，选苏宝公司</p></a>
-        <a href="#"><div></div><p>上海商务会议租车更快更好的保证企业形象宣传</p></a>
-        <a href="#"><div></div><p>上海哪家租车公司好，选苏宝公司</p></a>
-        <a href="#"><div></div><p>上海商务会议租车更快更好的保证企业形象宣传</p></a>
-        <a href="#"><div></div><p>上海哪家租车公司好，选苏宝公司</p></a>
-        <a href="#"><div></div><p>上海哪家租车公司好，选苏宝公司</p></a>
-        <a href="#"><div></div><p>上海哪家租车公司好，选苏宝公司</p></a>
-      </div>
-
-    </div>
+  <#include "_nav_right.ftl"> 
   </div>
   <div class="clearfix"></div>
 </div>

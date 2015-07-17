@@ -1,6 +1,7 @@
 package com.subaozuche.model;
 
 import java.sql.Timestamp;
+import java.util.Date;
 
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
@@ -14,7 +15,7 @@ public class News {
 	@NotBlank(message = "内容不能为空")
 	private String content;
 	private Timestamp createdAt;
-	private Timestamp updatedAt;
+	private Timestamp updatedAt = new Timestamp(new Date().getTime());
 	@Min(0)
 	@Max(1)
 	private int type;
@@ -66,7 +67,7 @@ public class News {
 	public void setType(int type) {
 		this.type = type;
 	}
-	
+
 	@Override
 	public String toString() {
 		return "News [id=" + id + ", title=" + title + ", content=" + content

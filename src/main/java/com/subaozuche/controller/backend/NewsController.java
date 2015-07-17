@@ -1,6 +1,7 @@
 package com.subaozuche.controller.backend;
 
-import java.util.LinkedHashMap;
+import java.sql.Timestamp;
+import java.util.Date;
 import java.util.Map;
 
 import javax.validation.Valid;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.subaozuche.bo.NewsBo;
+import com.subaozuche.comm.utils.ViewObjectInforHelper;
 import com.subaozuche.model.News;
 
 @Controller
@@ -22,6 +24,7 @@ import com.subaozuche.model.News;
 public class NewsController {
 	private static final String VIEW_DIR = "backend/news/";
 	private ModelAndView view = new ModelAndView();
+	private Map<String, String> options = ViewObjectInforHelper.getNewsTypes();
 
 	@Autowired
 	private NewsBo newsBo;
@@ -40,9 +43,6 @@ public class NewsController {
 
 	@RequestMapping(value = "create", method = RequestMethod.GET)
 	public ModelAndView create() {
-		Map<String, String> options = new LinkedHashMap<String, String>();
-		options.put("0", "行业新闻");
-		options.put("1", "公司新闻");
 		view.addObject("options", options);
 		view.addObject("news", new News());
 		view.setViewName(VIEW_DIR + "create");
@@ -63,6 +63,7 @@ public class NewsController {
 
 	@RequestMapping(value = "{id}/edit", method = RequestMethod.GET)
 	public ModelAndView update(@PathVariable int id) {
+		view.addObject("options", options);
 		view.addObject("news", newsBo.findById(id));
 		view.setViewName(VIEW_DIR + "edit");
 		return view;
@@ -81,6 +82,7 @@ public class NewsController {
 		News mNews = newsBo.findById(id);
 		mNews.setTitle(news.getTitle());
 		mNews.setContent(news.getContent());
+		mNews.setUpdatedAt(new Timestamp(new Date().getTime()));
 		newsBo.update(mNews);
 		return new ModelAndView("redirect:../../");
 	}

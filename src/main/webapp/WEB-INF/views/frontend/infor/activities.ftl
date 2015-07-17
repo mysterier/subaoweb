@@ -5,13 +5,13 @@
     	<h3 class="text-left">优惠活动
 		<span class="text-left">SPECIAL OFFER</span>
 		</h3>
-		<#list activities as activitiy>
+		<#list activities as activity>
 		<div class="activities-list">
-			<p>活动名称：<span>${activitiy.title}</span></p>
-          	<p>活动地区：<span>${activitiy.city}</span></p>
-          	<p>活动时间：<span>${activitiy.activitiyStart}至${activitiy.activitiyEnd}</span></p>
-          	<p>活动简介：<span>${activitiy.activitiyIntro}</span></p>
-          	<a href="${url}/acticites/detail/{acticity.id}" class="btn btn-info">查看活动详情</a>
+			<p>活动名称：<span>${activity.title}</span></p>
+          	<p>活动地区：<span>${activity.city}</span></p>
+          	<p>活动时间：<span>${activity.activityStart}至${activity.activityEnd}</span></p>
+          	<p>活动简介：<span>${activity.activityIntro}</span></p>
+          	<a href="${url}/activities/detail/${activity.id}" class="btn btn-info">查看活动详情</a>
       	</div>
 		</#list>
   	</div>
