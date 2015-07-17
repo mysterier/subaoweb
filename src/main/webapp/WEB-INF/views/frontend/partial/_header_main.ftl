@@ -54,7 +54,7 @@
       <ul id="topnav">
         <li class="nav-select"><a href="${url}/">首页</a></li>
         <li>
-          <a href="#project">服务项目</a>
+          <a href="${url}/#project">服务项目</a>
           <ul>
             <li><a href="${url}/service-jichang">接机送机</a></li>
             <li><a href="${url}/service-banche">企业班车</a></li>
@@ -65,8 +65,8 @@
             <li><a href="${url}/service-hunqing">婚庆租车</a></li>
           </ul>
         </li>
-        <li><a href="#price">服务价格</a></li>
-        <li><a href="#about">服务优势</a></li>
+        <li><a href="${url}/#price">服务价格</a></li>
+        <li><a href="${url}/about/">服务优势</a></li>
         <li>
           <a href="${url}/news/">新闻中心</a>
           <ul style="">
