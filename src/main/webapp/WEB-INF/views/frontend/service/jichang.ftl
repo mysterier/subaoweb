@@ -12,7 +12,7 @@
         </p>
     </div>
     <button type="button" class="btn-subscribe">点击预约</button>
-    <div class="service-img"><img src="/img/service1.jpg"></div>
+    <div class="service-img"><img src="${url}/img/service1.jpg"></div>
     <div class="service-hgroup-content">
         <dl class="text-left">
             <dt>上海苏宝汽车租赁有限公司推出</dt>

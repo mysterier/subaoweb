@@ -56,24 +56,59 @@
   </div>
 
 <div class="price-wrapper pad100">
-  <div class="wrapper">
-    <h3 id="price" class="text-center white">服务价格</h3>
-    <p class="text-center gray-light">PRICE</p>
-    <div class="allline"></div>
-    <p class="text-center gray-light subtitle">我们致力于提供最优质的运载服务，以期改变人们
-      以往的出行方式，带给人们别样的用车体验。
-诸多人性化、个性化的服务让生活更轻松。 </p>
-    <div class="price-content">
-        <div class="price-content-left"><img src="${url}/img/price-1.jpg"></div>
-        <div class="price-content-right">
-          <div class="price-content-top"><img src="${url}/img/price-2.jpg"></div>
-          <div class="price-content-bottom1"><img src="${url}/img/price-3.jpg"></div>
-          <div class="price-content-botton2"><img src="${url}/img/price-4.jpg"></div>
+        <div class="wrapper">
+            <h3 id="price" class="text-center white">服务价格</h3>
+            <p class="text-center gray-light">PRICE</p>
+            <div class="allline"></div>
+            <p class="text-center gray-light subtitle">我们致力于提供最优质的运载服务，以期改变人们 以往的出行方式，带给人们别样的用车体验。 诸多人性化、个性化的服务让生活更轻松。 </p>
+            <div class="price-content">
+                <div class="sb-relative pull-left price-left">
+                    <img src="${url}/img/price-1.jpg" width="570" height="420">
+                    <div class="price-content-left">
+                        <h4>接机送机</h4>
+                        <p>起步价:￥280</p>
+                        <p>超时费:￥3</p>
+                        <p>超路程:￥30</p>
+                    </div>
+                </div>
+                <div class="price-right pull-left">
+                  <div>
+                    <div class="sb-relative price-right-top">
+                        <img width="560" height="205" src="${url}/img/price-2.jpg" >
+                        <div class="price-content-top">
+                            <h4>商务租车</h4>
+                            <p>起步价:￥600</p>
+                            <p>超时费:￥5</p>
+                            <p>超路程:￥50</p>
+                        </div>
+                   </div>
+                 </div>
+                 <div class="price-right-bottom">
+                    <div class="sb-relative pull-left">
+                        <img width="275" height="205" src="${url}/img/price-3.jpg">
+                         <div class="price-content-bottom1">
+                            <h4>旅游租车</h4>
+                            <p>起步价:￥1500</p>
+                            <p>超时费:￥5</p>
+                            <p>超路程:￥50</p>
+                        </div>
+                    </div>
+                    <div class="sb-relative pull-left">
+                        <img width="275" height="205" src="${url}/img/price-4.jpg">
+                        <div class="price-content-bottom2">
+                            <h4>婚庆租车</h4>
+                            <p>起步价:￥800</p>
+                            <p>超时费:￥10</p>
+                            <p>超路程:￥100</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+            </div>
+            <div class="clearfix"></div>
         </div>
-        <div class="clearfix"></div>
     </div>
-  </div>
-</div>
 <div class="wrapper pad100">
   <h3 id="project" class="text-center gray-darker">项目优势</h3>
     <p class="text-center gray">ADVANTAGE</p>

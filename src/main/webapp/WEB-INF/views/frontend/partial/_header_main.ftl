@@ -55,33 +55,33 @@
         <li class="nav-select"><a href="${url}/">首页</a></li>
         <li>
           <a href="#project">服务项目</a>
-          <span>
-            <a href="${url}/service-jichang">接机送机</a>
-            <a href="${url}/service-banche">企业班车</a>
-            <a href="${url}/service-huiyi">商务会议接送</a>
-            <a href="${url}/service-shangwu">商务用车</a>
-            <a href="${url}/service-lvyou">旅游租车</a>
-            <a href="${url}/service-linjin">邻近城市专送</a>
-            <a href="${url}/service-hunqing">婚庆租车</a>
-          </span>
+          <ul>
+            <li><a href="${url}/service-jichang">接机送机</a></li>
+            <li><a href="${url}/service-banche">企业班车</a></li>
+            <li><a href="${url}/service-huiyi">商务会议接送</a></li>
+            <li><a href="${url}/service-shangwu">商务用车</a></li>
+            <li><a href="${url}/service-lvyou">旅游租车</a></li>
+            <li><a href="${url}/service-linjin">邻近城市专送</a></li>
+            <li><a href="${url}/service-hunqing">婚庆租车</a></li>
+          </ul>
         </li>
         <li><a href="#price">服务价格</a></li>
         <li><a href="#about">服务优势</a></li>
         <li>
           <a href="${url}/news/">新闻中心</a>
-          <span style="">
-            <a href="${url}/industry/">行业新闻</a>
-            <a href="${url}/company/">公司新闻</a>
-            <a href="${url}/activities/">活动优惠</a>
-          </span>
+          <ul style="">
+            <li><a href="${url}/industry/">行业新闻</a></li>
+            <li><a href="${url}/company/">公司新闻</a></li>
+            <li><a href="${url}/activities/">活动优惠</a></li>
+          </ul>
         </li>
         <li>
           <a href="#">帮助中心</a>
-          <span style="">
-            <a href="${url}/flow/">订车流程</a>
-            <a href="${url}/rule/">服务规则</a>
-            <a href="${url}/faq/">常见问题</a>
-          </span>
+          <ul>
+            <li><a href="${url}/flow/">订车流程</a></li>
+            <li><a href="${url}/rule/">服务规则</a></li>
+            <li><a href="${url}/faq/">常见问题</a></li>
+          </ul>
         </li>
         <li><a href="${url}/order/">在线订车</a></li>
       </ul>

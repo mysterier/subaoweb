@@ -9,7 +9,7 @@
         </p>
     </div>
     <button type="button" class="btn-subscribe">点击预约</button>
-    <div class="service-img"><img src="/img/service4.jpg"></div>
+    <div class="service-img"><img src="${url}/img/service4.jpg"></div>
     <div class="service-hgroup-content">
         <dl class="text-left">
             <dt></dt>

@@ -6,7 +6,7 @@
     <div class="service-hgroup-title">
         <h3 class="text-center gray-darker"> 邻近城市专送</h3>
     </div>
-    <div class="service-img"><img src="/img/service6.jpg"></div>
+    <div class="service-img"><img src="${url}/img/service6.jpg"></div>
     <div class="service-hgroup-content">
         <dl class="text-left">
             <dd>当您需要去周边城市参加会议、探亲访友或旅游时，您只需实现通过电话或Email订车，我们可以上门服务接送您直达目的地，免除您去机场、高铁车站的奔波之苦。</dd>
