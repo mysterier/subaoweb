@@ -3,7 +3,7 @@
 <div class="clearfix"></div>
 <#include "_sub_nav.ftl">
 <div class="wrapper pad100">
-    <h3 class="text-center gray-darker"> 旅游租车</h3>
+    <h3 class="text-center gray-darker">旅游租车</h3>
     <div class="service-img"><img src="${url}/img/service5.jpg"></div>
     <div class="service-hgroup-content">
         <dl class="text-left">
@@ -28,7 +28,7 @@
         <dl class="text-left">
             <dt>（我们承诺五星服务，三星价格）</dt>
         </dl>
-        <button type="button" class="btn btn-block btn-info btn-lg">点击预约</button>
+        <a href="${url}/order/" class="btn btn-block blue-btn btn-lg">点击预约</a>
     </div>
 </div>
 <#include "../partial/_footer_main.ftl">

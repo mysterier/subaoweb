@@ -10,7 +10,7 @@
             由于近几年社会整体的消费水平提高、公交的涨价等，很多企业就为员工提供上下班班车服务。其中上海的企业班车租赁较为多，因为上海属于一线城市，企业为了员工能够方便上下班，于是就特意租企业班车。且上海企业班车服务也是数不胜数，但是苏宝租车的出现，使得企业班车出租这行业更加的繁荣。
         </p>
     </div>
-    <button type="button" class="btn-subscribe">点击预约</button>
+    <a href="${url}/order/" class="btn btn-block btn-subscribe">点击预约</a>
     <div class="service-img"><img src="${url}/img/service2.jpg"></div>
     <div class="service-hgroup-content">
         <dl class="text-left">
@@ -29,7 +29,7 @@
             <dd>完善售后服务体系</dd>
             <dd>企业用车中的强力选择</dd>
         </dl>
-        <button type="button" class="btn btn-block btn-info btn-lg">点击预约</button>
+        <a href="${url}/order/" class="btn btn-block blue-btn btn-lg">点击预约</a>
     </div>
 </div>
 <#include "../partial/_footer_main.ftl">
