@@ -8,8 +8,8 @@
         <p class="text-center gray">商务租车，可以控制企业买车的成本节省企业购车所占用的大量人力、资金、车辆维修、车辆保养车辆保险等资源。商务租车一种新兴的朝阳行业。 作为上海商务租车公司的苏宝，以其专业的营销租赁服务，获得了无数企事业单位的青睐，在上海租车市场卷起了一股商务租车的新潮流。
         </p>
     </div>
-    <button type="button" class="btn-subscribe">点击预约</button>
-    <div class="service-img"><img src="/img/service4.jpg"></div>
+	<a href="${url}/order/" class="btn btn-block btn-subscribe">点击预约</a>
+    <div class="service-img"><img src="${url}/img/service4.jpg"></div>
     <div class="service-hgroup-content">
         <dl class="text-left">
             <dt></dt>
@@ -18,7 +18,7 @@
             <dd>苏宝商务租车，帮助你轻松解决一切商务出行事宜，让你不在为租车而烦恼，让你不在为赶不上会议而焦愁。</dd>
             <dd>苏宝租车，上海商务租车领跑者！</dd>
         </dl>
-        <button type="button" class="btn btn-block btn-info btn-lg">点击预约</button>
+        <a href="${url}/order/" class="btn btn-block blue-btn btn-lg">点击预约</a>
     </div>
 </div>
 <#include "../partial/_footer_main.ftl">

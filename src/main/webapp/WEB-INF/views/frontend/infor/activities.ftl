@@ -11,7 +11,7 @@
           	<p>活动地区：<span>${activity.city}</span></p>
           	<p>活动时间：<span>${activity.activityStart}至${activity.activityEnd}</span></p>
           	<p>活动简介：<span>${activity.activityIntro}</span></p>
-          	<a href="${url}/activities/detail/${activity.id}" class="btn btn-info">查看活动详情</a>
+          	<a href="${url}/activities/detail/${activity.id}" class="btn blue-btn">查看活动详情</a>
       	</div>
 		</#list>
   	</div>

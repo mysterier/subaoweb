@@ -11,8 +11,8 @@
             没事，苏宝租车为您提供最专业的机场接送服务，让您在机场接送租车的过程中享受尊贵的待遇，使您可以下机不用为打不到车、车价贵等问题而烦恼。同时苏宝也为您考虑到，在想享受租车接机和机场接送租车同时，若有需要可以进行专人机场大厅接送，把您带上专车载到您指定的任何地点，让您有更加舒适的享受机场接送服务。
         </p>
     </div>
-    <button type="button" class="btn-subscribe">点击预约</button>
-    <div class="service-img"><img src="/img/service1.jpg"></div>
+	<a href="${url}/order/" class="btn btn-block btn-subscribe">点击预约</a>
+    <div class="service-img"><img src="${url}/img/service1.jpg"></div>
     <div class="service-hgroup-content">
         <dl class="text-left">
             <dt>上海苏宝汽车租赁有限公司推出</dt>
@@ -43,7 +43,7 @@
             <dd>3、低廉价格、高质服务 </dd>
             <dd>4、服务不满意，直接免单</dd>
         </dl>
-        <button type="button" class="btn btn-block btn-info btn-lg">点击预约</button>
+        <a href="${url}/order/" class="btn btn-block blue-btn btn-lg">点击预约</a>
     </div>
 </div>
 <#include "../partial/_footer_main.ftl">

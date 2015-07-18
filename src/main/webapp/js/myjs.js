@@ -1,10 +1,10 @@
 $(function(){
   // nav
   $('ul#topnav li').mousemove(function(){
-    $(this).find('span').slideDown("1000");
+    $(this).find('ul').show();
   });
   $('ul#topnav li').mouseleave(function () {
-    $(this).find('span').slideUp("fast");
+    $(this).find('ul').hide();
   });
 // login
 $('.login-top').click(function(){
@@ -14,6 +14,13 @@ $('.login-top').click(function(){
 $('.theme-poptit .close').click(function(){
   $('.theme-popover-mask').fadeOut(100);
   $('.theme-popover').slideUp(200);
+})
+//
+$('.price-content .sb-relative').mousemove(function(){
+  $(this).find('div').show();
+})
+$('.price-content .sb-relative').mouseleave(function(){
+  $(this).find('div').hide();
 })
 
 })
