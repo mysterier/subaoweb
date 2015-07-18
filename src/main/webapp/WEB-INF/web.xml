@@ -27,6 +27,7 @@
 	</listener>
 	<session-config>
 		<session-timeout>20</session-timeout>
+		<tracking-mode>COOKIE</tracking-mode>
 	</session-config>
 	<servlet>
 		<servlet-name>spring3mvc</servlet-name>
@@ -72,4 +73,5 @@
 		<url-pattern>/backend/*</url-pattern>
 		<url-pattern>/profile/*</url-pattern>
 	</filter-mapping>
+	
 </web-app>
