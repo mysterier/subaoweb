@@ -5,6 +5,7 @@ import java.sql.Timestamp;
 import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotBlank;
 
 public class Client {
@@ -15,6 +16,7 @@ public class Client {
 	//todo 登录名唯一验证
 	private String clientName;
 	@NotBlank(message = "用户密码不能为空")
+	@Length(min = 6, max = 16)
 	private String clientPass;
 	@NotBlank(message = "邮箱地址不能为空")
 	@Email(message = "请输入正确的邮箱地址")

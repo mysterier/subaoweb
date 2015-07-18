@@ -39,7 +39,7 @@
     <div class="wrapper">
       <div class="header-login pull-right">
       		<#if Session.client_user?exists>
-			<span><a href="${url}/user/" class="login-top">个人中心</a></span>|<span><a href="${url}/logout/">登出</a></span>
+			<span><a href="${url}/profile/user/">个人中心</a></span>|<span><a href="${url}/logout/">登出</a></span>
 			<#else>
 			<span><a href="#" class="login-top">登录</a></span>|<span><a href="${url}/reg/">注册</a></span>
 			</#if>

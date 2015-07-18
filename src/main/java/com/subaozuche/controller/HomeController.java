@@ -74,6 +74,7 @@ public class HomeController {
 	@RequestMapping(value = "/reg", method = RequestMethod.GET)
 	public ModelAndView regIndex() {
 		view.addObject("options", options);
+		view.addObject("newses", newsBo.findAll());
 		view.addObject("client", new Client());
 		view.setViewName(VIEW_DIR + "reg");
 		return view;
@@ -114,6 +115,8 @@ public class HomeController {
 			BindingResult bindingResult) {
 		if (bindingResult.hasErrors()) {
 			view.addObject("client", client);
+			view.addObject("options", options);
+			view.addObject("newses", newsBo.findAll());
 			view.setViewName(VIEW_DIR + "reg");
 			return view;
 		}

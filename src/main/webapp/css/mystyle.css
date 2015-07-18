@@ -106,7 +106,7 @@ ul#topnav li a{
   text-decoration: none;
 }
 .nav-select a,ul#topnav li a:hover{
-  background: #2fa3ff url(/subaoweb/img/nav-select.jpg) repeat-x;
+  background: #2fa3ff url(/img/nav-select.jpg) repeat-x;
   color: #fff !important;
 }
 ul#topnav li span {
@@ -132,7 +132,7 @@ ul#topnav li span a:hover {
   height: 660px;
   margin: 0 auto;
   background-color: #2c2c2c;
-  background: url(/subaoweb/img/banner.jpg) no-repeat center top;
+  background: url(/img/banner.jpg) no-repeat center top;
 
 }
 .allline::before{
@@ -195,31 +195,31 @@ ul#topnav li span a:hover {
 	background-color: #34a8ed !important;
 }
 .service-1{
-    background: url(/subaoweb/img/fwu_1.png) no-repeat;
+    background: url(/img/fwu_1.png) no-repeat;
     background-size: contain;
 }
 .service-2{
-    background: url(/subaoweb/img/fwu_2.png) no-repeat;
+    background: url(/img/fwu_2.png) no-repeat;
       background-size: contain;
 }
 .service-3{
-    background: url(/subaoweb/img/fuwu_6.png) no-repeat;
+    background: url(/img/fuwu_6.png) no-repeat;
       background-size: contain;
 }
 .service-4{
-    background: url(/subaoweb/img/fwu_3.png) no-repeat;
+    background: url(/img/fwu_3.png) no-repeat;
       background-size: contain;
 }
 .service-5{
-    background: url(/subaoweb/img/fwu_4.png) no-repeat;
+    background: url(/img/fwu_4.png) no-repeat;
       background-size: contain;
 }
 .service-6{
-    background: url(/subaoweb/img/fuwu_7.png) no-repeat;
+    background: url(/img/fuwu_7.png) no-repeat;
       background-size: contain;
 }
 .price-wrapper{
-  background: url(/subaoweb/img/price-bg.jpg) no-repeat center center;
+  background: url(/img/price-bg.jpg) no-repeat center center;
   background-clip: border-box;
   background-attachment: fixed;
 }
@@ -275,7 +275,7 @@ footer{
   height: 300px;
   margin: 0 auto;
   background-color: #2c2c2c;
-  background: url(/subaoweb/img/sub-banner.png) no-repeat center top;
+  background: url(/img/sub-banner.png) no-repeat center top;
 }
 .sub-nav ul{
   text-decoration: none;

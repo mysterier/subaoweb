@@ -1,3 +1,4 @@
+<div style="display: none;position:fixed;bottom:200px;right:1%;left:1%;" class="tips"></div>
 <footer class="pad100">
 <div class="wrapper white">
     <div class="footer-left">
@@ -47,3 +48,11 @@
 </body>
 
 </html>
+<script>
+function alertMsg(msg) {
+	$(".tips").html(msg).fadeIn(1000).fadeOut(1500);
+}
+<#if msg?exists>
+alertMsg('${msg}');
+</#if>
+</script>
