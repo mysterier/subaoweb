@@ -38,7 +38,7 @@ public class SessionFilter extends OncePerRequestFilter {
 			// 执行过滤
 			// 从session中获取登录者实体
 			String user = (uri.indexOf("/backend") != -1) ? SessionKeyContent.SESSION_KEY_OBJ_USER_BEAN : SessionKeyContent.SESSION_KEY_OBJ_CLIENT_BEAN;
-			String redirect = (uri.indexOf("/backend") != -1) ? "/subaoweb/backend/login/" : "/subaoweb/";
+			String redirect = (uri.indexOf("/backend") != -1) ? "/backend/login/" : "/";
 
 			Object obj = request.getSession().getAttribute(user);
 			if (null == obj) {
