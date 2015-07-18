@@ -84,9 +84,8 @@
 				<entry key="pageTitle" value="苏宝租车后台管理系统" />
 				<entry key="backendPageTitle" value="苏宝租车后台管理系统" />
 				<entry key="backendTitle" value="苏宝租车后台管理系统" />
-				<entry key="url" value="/subaoweb" />
-				<entry key="adminUrl" value="/subaoweb" />
-				<entry key="backendUrl" value="/subaoweb/backend" />
+				<entry key="url" value="/" />
+				<entry key="backendUrl" value="/backend" />
 			</map>
 		</property>
 	</bean>
