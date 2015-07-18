@@ -32,7 +32,7 @@ public class AdminUserController extends BaseBackendController {
 	public AdminUserController() {
 		logger.debug("this is AdminUserController Action list=======");
 		view.addObject("menuId", 0);
-		view.addObject("subMenuId", 0);
+		view.addObject("subMenuId", 100);
 	}
 
 	@RequestMapping(value = { "", "list" }, method = RequestMethod.GET)

@@ -52,8 +52,8 @@
     <div id="logo"><img src="${url}/img/logo.png"></div>
     <div id="nav">
       <ul id="topnav">
-        <li class="nav-select"><a href="${url}/">首页</a></li>
-        <li>
+        <li <#if subMenuId?exists&&subMenuId==0>class="nav-select"</#if>><a href="${url}/">首页</a></li>
+        <li <#if springMacroRequestContext.requestUri?contains("/service")>class="nav-select"</#if>>
           <a href="${url}/#project">服务项目</a>
           <ul>
             <li><a href="${url}/service-jichang">接机送机</a></li>
@@ -66,8 +66,8 @@
           </ul>
         </li>
         <li><a href="${url}/#price">服务价格</a></li>
-        <li><a href="${url}/about/">服务优势</a></li>
-        <li>
+        <li <#if springMacroRequestContext.requestUri?contains("/about")>class="nav-select"</#if>><a href="${url}/about/">服务优势</a></li>
+        <li <#if springMacroRequestContext.requestUri?contains("/news")||springMacroRequestContext.requestUri?contains("/industry")||springMacroRequestContext.requestUri?contains("/company")||springMacroRequestContext.requestUri?contains("/activities")>class="nav-select"</#if>>
           <a href="${url}/news/">新闻中心</a>
           <ul style="">
             <li><a href="${url}/industry/">行业新闻</a></li>
@@ -75,15 +75,14 @@
             <li><a href="${url}/activities/">活动优惠</a></li>
           </ul>
         </li>
-        <li>
-          <a href="#">帮助中心</a>
+        <li <#if springMacroRequestContext.requestUri?contains("/flow")||springMacroRequestContext.requestUri?contains("/rule")||springMacroRequestContext.requestUri?contains("/faq")>class="nav-select"</#if>><a href="#">帮助中心</a>
           <ul>
             <li><a href="${url}/flow/">订车流程</a></li>
             <li><a href="${url}/rule/">服务规则</a></li>
             <li><a href="${url}/faq/">常见问题</a></li>
           </ul>
         </li>
-        <li><a href="${url}/order/">在线订车</a></li>
+        <li <#if springMacroRequestContext.requestUri?contains("/order")>class="nav-select"</#if>><a href="${url}/order/">在线订车</a></li>
       </ul>
     </div>
   </div>
