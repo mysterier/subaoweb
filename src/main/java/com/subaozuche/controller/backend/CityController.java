@@ -80,6 +80,6 @@ public class CityController {
 	@RequestMapping(value = "{id}/delete", method = RequestMethod.GET)
 	public String delete(@PathVariable int id) {
 		cityBo.delete(id);
-		return "redirect:../";
+		return "redirect:../../";
 	}
 }
