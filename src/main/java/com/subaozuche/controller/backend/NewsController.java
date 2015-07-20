@@ -57,6 +57,7 @@ public class NewsController {
 			view.setViewName(VIEW_DIR + "create");
 			return view;
 		}
+		news.setUpdatedAt(new Timestamp(new Date().getTime()));
 		newsBo.add(news);
 		return new ModelAndView("redirect:../");
 	}

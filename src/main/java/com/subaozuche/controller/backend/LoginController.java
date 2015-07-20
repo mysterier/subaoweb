@@ -18,7 +18,7 @@ import com.subaozuche.model.AdminLoginForm;
 import com.subaozuche.model.AdminUser;
 
 @Controller
-@RequestMapping("backend")
+@RequestMapping("/backend")
 public class LoginController extends BaseBackendController {
 	private static final String VIEW_DIR = "backend/";
 	private static Logger logger = LoggerFactory.getLogger(LoginController.class);

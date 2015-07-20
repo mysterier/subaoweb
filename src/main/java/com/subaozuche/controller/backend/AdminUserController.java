@@ -20,7 +20,7 @@ import com.subaozuche.controller.core.BaseBackendController;
 import com.subaozuche.model.AdminUser;
 
 @Controller
-@RequestMapping("backend/adminuser")
+@RequestMapping("/backend/adminuser")
 public class AdminUserController extends BaseBackendController {
 	private static Logger logger = LoggerFactory.getLogger(AdminUserController.class);
 	private static final String VIEW_DIR = "backend/user/";
