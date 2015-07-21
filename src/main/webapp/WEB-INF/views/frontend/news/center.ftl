@@ -8,7 +8,7 @@
 </h3>
 <#list industryNewses as industryNews>
         <div class="news-p">
-            <a href="${url}/industry/${industryNews.id}.html">
+            <a href="${url}/industry/${industryNews.id?c}.html">
   ${industryNews.title}
   <span class="pull-right">${industryNews.updatedAt}</span>
 			</a>
@@ -20,7 +20,7 @@
 </h3>
 <#list companyNewses as companyNews>
         <div class="news-p">
-            <a href="${url}/company/${companyNews.id}.html">
+            <a href="${url}/company/${companyNews.id?c}.html">
 	${companyNews.title}
     <span class="pull-right">${companyNews.updatedAt}</span>
   </a>
