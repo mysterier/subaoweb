@@ -110,7 +110,7 @@
         </div>
     </div>
 <div class="wrapper pad100">
-  <h3 id="project" class="text-center gray-darker">项目优势</h3>
+  <h3 id="about" class="text-center gray-darker">项目优势</h3>
     <p class="text-center gray">ADVANTAGE</p>
   <div class="allline"></div>
   <p class="text-center gray subtitle">我们致力于提供最优质的运载服务，以期改变人们

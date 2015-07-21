@@ -7,7 +7,7 @@
     	</h3>
 		<#list companyNewses as companyNews>
     	<div class="news-p">
-    		 <a href="${url}/industry/${companyNews.title}">${companyNews.title}
+    		 <a href="${url}/industry/${companyNews.id}.html">${companyNews.title}
 				<span class="pull-right">${companyNews.updatedAt}</span>
 			</a>
 		</div>

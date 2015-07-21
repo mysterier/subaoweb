@@ -33,9 +33,9 @@ public class NewsCenterController {
 		return view;
 	}
 	
-	@RequestMapping(value = "/industry/{title:.*}", method = RequestMethod.GET)
-	public ModelAndView industryDetailAction(@PathVariable String title) {
-		view.addObject("industryNews", newsBo.findByTitle(title));
+	@RequestMapping(value = "/industry/{id}.html", method = RequestMethod.GET)
+	public ModelAndView industryDetailAction(@PathVariable int id) {
+		view.addObject("industryNews", newsBo.findById(id));
 		view.setViewName(VIEW_DIR + "industry_detail");
 		return view;
 	}
@@ -47,9 +47,9 @@ public class NewsCenterController {
 		return view;
 	}
 	
-	@RequestMapping(value = "/company/{title:.*}", method = RequestMethod.GET)
-	public ModelAndView companyDetailAction(@PathVariable String title) {
-		view.addObject("companyNews", newsBo.findByTitle(title));
+	@RequestMapping(value = "/company/{id}.html", method = RequestMethod.GET)
+	public ModelAndView companyDetailAction(@PathVariable int id) {
+		view.addObject("companyNews", newsBo.findById(id));
 		view.setViewName(VIEW_DIR + "company_detail");
 		return view;
 	}
