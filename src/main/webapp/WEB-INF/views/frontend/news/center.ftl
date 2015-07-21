@@ -4,7 +4,7 @@
     <div class="news">
         <h3 class="text-left">行业新闻
   <span class="text-left">TRADE NEWS</span>
-  <span class="pull-right"><a href="${url}/industry">更多行业新闻>></a></span>
+  <span class="pull-right"><a href="${url}/industry/">更多行业新闻>></a></span>
 </h3>
 <#list industryNewses as industryNews>
         <div class="news-p">
@@ -16,7 +16,7 @@
 </#list>
         <h3 class="text-left">公司新闻
 <span class="text-left">COMPANY NEWS</span>
-<span class="pull-right"><a href="${url}/company">更多行业新闻>></a></span>
+<span class="pull-right"><a href="${url}/company/">更多行业新闻>></a></span>
 </h3>
 <#list companyNewses as companyNews>
         <div class="news-p">
