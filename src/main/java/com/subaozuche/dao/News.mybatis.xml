@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.subaozuche.dao.NewsDao">
 	<insert id="add" useGeneratedKeys="true" keyProperty="id">
-		INSERT INTO tbl_news (title, content, type) VALUES
-		(#{title}, #{content}, #{type})
+		INSERT INTO tbl_news (title, content, type, updated_at) VALUES
+		(#{title}, #{content}, #{type}, #{updatedAt})
 	</insert>
 </mapper>

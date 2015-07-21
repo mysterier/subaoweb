@@ -8,6 +8,7 @@
     <title>${backendPageTitle}</title>
     <link href="${url}/css/bootstrap.min.css" rel="stylesheet">
     <link href="${backendUrl}/css/style.css" rel="stylesheet">
+	<script type="text/javascript" src="${url}/ckeditor/ckeditor.js"></script>
 </head>
 <body>
 <#include "_nav_top.ftl">

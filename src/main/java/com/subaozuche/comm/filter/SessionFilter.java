@@ -33,7 +33,10 @@ public class SessionFilter extends OncePerRequestFilter {
 				break;
 			}
 		}
-
+		
+		request.setCharacterEncoding("utf-8");
+		response.setCharacterEncoding("utf-8");
+		
 		if (doFilter) {
 			// 执行过滤
 			// 从session中获取登录者实体

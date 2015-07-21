@@ -11,6 +11,9 @@
 </div>
 <div class="form-group">
 	<label class="col-lg-2 control-label">内容</label>
-	<div class="col-sm-3"><@spring.formTextarea "news.content", 'class="form-control form-input-sep"'/></div>
+	<div class="col-sm-8"><@spring.formTextarea "news.content", 'class="form-control form-input-sep" id="newscontent"'/></div>
 	<@spring.showErrors " "/>
 </div>
+<script type="text/javascript">
+	var editor = CKEDITOR.replace('newscontent');
+</script>
