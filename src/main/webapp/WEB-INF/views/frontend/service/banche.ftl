@@ -4,7 +4,7 @@
 <#include "_sub_nav.ftl">
 <div class="wrapper submenu">
   <ol class="breadcrumb">
-  <li><a href="${url}">首页</a></li>
+  <li><a href="${url}/">首页</a></li>
   <li class="active">企业班车</li>
   </ol>
 </div>

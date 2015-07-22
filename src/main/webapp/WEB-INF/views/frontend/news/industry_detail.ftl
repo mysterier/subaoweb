@@ -2,7 +2,7 @@
 <div id="sub-banner"></div>
 <div class="wrapper submenu">
   <ol class="breadcrumb">
- 	<li><a href="${url}">首页</a></li>
+ 	<li><a href="${url}/">首页</a></li>
 	<li><a href="${url}/company/">行业新闻</a></li>
 	<li>${industryNews.title}</li>
   </ol>

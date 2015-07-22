@@ -4,7 +4,7 @@
     <div class="footer-left">
       <h3 class="text-left">苏宝租车</h3>
       <p><img src="${url}/img/footer-phone.png">400-684-5505</p>
-      <a href="${url}"><img src="${url}/img/footer-logo.png"></a>
+      <a href="${url}/"><img src="${url}/img/footer-logo.png"></a>
     </div>
     <div class="footer-right">
       <ul>

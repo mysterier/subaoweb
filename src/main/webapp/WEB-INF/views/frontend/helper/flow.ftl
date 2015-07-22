@@ -4,7 +4,7 @@
     <div class="help-right col-md-9">
 <div class="submenu">
   <ol class="breadcrumb">
- 	<li><a href="${url}">首页</a></li>
+ 	<li><a href="${url}/">首页</a></li>
 	<li>订单流程</li>
   </ol>
 </div>

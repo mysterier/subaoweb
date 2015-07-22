@@ -8,12 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="description"  content="租车公司哪家便宜?上海租车公司就选苏宝租车,它是包括机场接送、企业班车、商务包车、商务会议包车、婚庆租车及旅游租车等业务为一体的上海租车网." />
 	<meta name="keywords"  content="上海租车,苏宝，机场接送" />
-    <link rel="icon" href="#" sizes="16x16">
-    <link rel="icon" href="#" sizes="32x32">
-    <link rel="icon" href="#" sizes="48x48">
-    <link rel="icon" href="#" sizes="64x64">
+    <link rel="icon" href="${url}/img/ico/16.ico" sizes="16x16">
+    <link rel="icon" href="${url}/img/ico/24.ico" sizes="24x24">
+    <link rel="icon" href="${url}/img/ico/32.ico" sizes="32x32">
+    <link rel="icon" href="${url}/img/ico/48.ico" sizes="48x48">
     <link rel="stylesheet" type="text/css" href="${url}/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="${url}/css/mystyle.css"/>
+ 	<title>上海租车网,全国首家专业机场接送公司,平民价格,高端享受-苏宝租车</title>
     <script type="text/javascript" src="${url}/js/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="${url}/js/myjs.js"></script>
 </head>
@@ -50,7 +51,7 @@
   </header>
   <nav class="nav-wrapper">
     <div class="wrapper">
-    <div id="logo"><a href="${url}"><img src="${url}/img/logo.png"></a></div>
+    <div id="logo"><a href="${url}/"><img src="${url}/img/logo.png"></a></div>
     <div id="nav">
       <ul id="topnav">
         <li><a href="${url}/">首页</a></li>
