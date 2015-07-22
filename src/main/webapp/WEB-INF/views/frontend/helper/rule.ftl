@@ -2,6 +2,12 @@
 <div class="wrapper pad100">
 <#include "_nav_left.ftl">
     <div class="help-right col-md-9">
+<div class="submenu">
+  <ol class="breadcrumb">
+ 	<li><a href="${url}">首页</a></li>
+	<li>服务规则</li>
+  </ol>
+</div>
         <h3>服务规则</h3>
         <p><strong>Q：预定车辆后，司机会准时到达吗？</strong></p>
         <p>A：只要您提前订车，并且我们会调度离乘客上车地点最近的车辆，无特殊情况可以准时到达。如遇到堵车、交通管制等特殊情况时，我们会及时调度其他车辆确保准时到达或提前告知您并给您推荐其他更快捷的出行方式。</p>

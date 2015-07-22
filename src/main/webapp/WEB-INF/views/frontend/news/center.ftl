@@ -1,5 +1,11 @@
 <#include "../partial/_header_main.ftl">
 <div id="sub-banner"></div>
+<div class="wrapper submenu">
+  <ol class="breadcrumb">
+  <li><a href="${url}">首页</a></li>
+  <li class="active">新闻中心</li>
+  </ol>
+</div>
 <div class="wrapper pad50">
     <div class="news">
         <h3 class="text-left">行业新闻

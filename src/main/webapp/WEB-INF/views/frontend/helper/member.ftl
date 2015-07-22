@@ -2,6 +2,12 @@
 <div class="wrapper pad100">
 <#include "_nav_left.ftl">
 <div class="help-right col-md-9">
+<div class="submenu">
+  <ol class="breadcrumb">
+ 	<li><a href="${url}">首页</a></li>
+	<li>会员介绍</li>
+  </ol>
+</div>
     <p><strong>一、注册会员</strong></p>
     <p>注册会员，请点击<a href="http://www.subaozuche.com/reg/">注册</a>，或点击页面右上角的注册按钮</p>
     <p><strong>二、会员隐私权利</strong></p>

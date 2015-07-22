@@ -2,6 +2,12 @@
 <div id="sub-banner"></div>
 <div class="clearfix"></div>
 <#include "_sub_nav.ftl">
+<div class="wrapper submenu">
+  <ol class="breadcrumb">
+  <li><a href="${url}">首页</a></li>
+  <li class="active">旅游租车</li>
+  </ol>
+</div>
 <div class="wrapper pad100">
     <h3 class="text-center gray-darker">旅游租车</h3>
     <div class="service-img"><img src="${url}/img/service5.jpg"></div>

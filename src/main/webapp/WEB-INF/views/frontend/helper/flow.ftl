@@ -2,6 +2,12 @@
 <div class="wrapper pad100">
 	<#include "_nav_left.ftl">
     <div class="help-right col-md-9">
+<div class="submenu">
+  <ol class="breadcrumb">
+ 	<li><a href="${url}">首页</a></li>
+	<li>订单流程</li>
+  </ol>
+</div>
         <h3>如何注册会员</h3>
         <p><strong>1. 点击首页的"注册"按钮，进入免费注册页面，按照要求填写注册信息。</strong></p>
         <img src="${url}/img/p1.png">
