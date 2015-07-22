@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.subaozuche.bo.NewsBo;
+import com.subaozuche.comm.utils.ConstDescription;
+import com.subaozuche.comm.utils.ConstKeywords;
+import com.subaozuche.comm.utils.ConstTitle;
 import com.subaozuche.model.News;
 
 @Controller
@@ -28,6 +31,9 @@ public class NewsCenterController {
 
 	@RequestMapping(value = "news", method = RequestMethod.GET)
 	public ModelAndView newsCenter() {
+		view.addObject("title", ConstTitle.NEWS);
+		view.addObject("keywords", ConstKeywords.NEWS);
+		view.addObject("description", ConstDescription.NEWS);
 		view.addObject("industryNewses",
 				getCurrentList(newsBo.findByType(0), 1));
 		view.addObject("companyNewses", getCurrentList(newsBo.findByType(1), 1));
@@ -37,6 +43,9 @@ public class NewsCenterController {
 
 	@RequestMapping(value = "industry", method = RequestMethod.GET)
 	public ModelAndView newsIndustry() {
+		view.addObject("title", ConstTitle.INDUSTRY);
+		view.addObject("keywords", ConstKeywords.INDUSTRY);
+		view.addObject("description", ConstDescription.INDUSTRY);
 		view.addObject("industryNewses",
 				getCurrentList(newsBo.findByType(0), 1));
 		view.addObject("totalPage", totalPage);
@@ -46,6 +55,9 @@ public class NewsCenterController {
 	
 	@RequestMapping(value = "/industry/page/{id}")
 	public ModelAndView industryPagination(@PathVariable int id) {
+		view.addObject("title", ConstTitle.INDUSTRY);
+		view.addObject("keywords", ConstKeywords.INDUSTRY);
+		view.addObject("description", ConstDescription.INDUSTRY);
 		view.addObject("industryNewses",
 				getCurrentList(newsBo.findByType(0), id));
 		view.addObject("totalPage", totalPage);
@@ -55,6 +67,9 @@ public class NewsCenterController {
 
 	@RequestMapping(value = "/industry/{id}.html", method = RequestMethod.GET)
 	public ModelAndView industryDetailAction(@PathVariable int id) {
+		view.addObject("title", newsBo.findById(id).getTitle());
+		view.addObject("keywords", ConstKeywords.INDUSTRY);
+		view.addObject("description", ConstDescription.INDUSTRY);
 		view.addObject("industryNews", newsBo.findById(id));
 		view.setViewName(VIEW_DIR + "industry_detail");
 		return view;
@@ -62,6 +77,9 @@ public class NewsCenterController {
 
 	@RequestMapping(value = "company", method = RequestMethod.GET)
 	public ModelAndView newsCompany() {
+		view.addObject("title", ConstTitle.COMPANY);
+		view.addObject("keywords", ConstKeywords.COMPANY);
+		view.addObject("description", ConstDescription.COMPANY);
 		view.addObject("companyNewses", getCurrentList(newsBo.findByType(1), 1));
 		view.addObject("totalPage", totalPage);
 		view.setViewName(VIEW_DIR + "company");
@@ -70,6 +88,9 @@ public class NewsCenterController {
 
 	@RequestMapping(value = "/company/page/{id}")
 	public ModelAndView companyPagination(@PathVariable int id) {
+		view.addObject("title", ConstTitle.COMPANY);
+		view.addObject("keywords", ConstKeywords.COMPANY);
+		view.addObject("description", ConstDescription.COMPANY);
 		view.addObject("companyNewses",
 				getCurrentList(newsBo.findByType(1), id));
 		view.addObject("totalPage", totalPage);
@@ -79,6 +100,9 @@ public class NewsCenterController {
 
 	@RequestMapping(value = "/company/{id}.html", method = RequestMethod.GET)
 	public ModelAndView companyDetailAction(@PathVariable int id) {
+		view.addObject("title", newsBo.findById(id).getTitle());
+		view.addObject("keywords", ConstKeywords.COMPANY);
+		view.addObject("description", ConstDescription.COMPANY);
 		view.addObject("companyNews", newsBo.findById(id));
 		view.setViewName(VIEW_DIR + "company_detail");
 		return view;

@@ -12,6 +12,9 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.subaozuche.bo.ActivityBo;
 import com.subaozuche.bo.RecruitBo;
+import com.subaozuche.comm.utils.ConstDescription;
+import com.subaozuche.comm.utils.ConstKeywords;
+import com.subaozuche.comm.utils.ConstTitle;
 import com.subaozuche.model.Recruit;
 
 @Controller
@@ -30,6 +33,9 @@ public class InforController {
 
 	@RequestMapping(value = "/activities", method = RequestMethod.GET)
 	public ModelAndView activitiesAction() {
+		view.addObject("title", ConstTitle.ACTIVITIES);
+		view.addObject("keywords", ConstKeywords.ACTIVITIES);
+		view.addObject("description", ConstDescription.ACTIVITIES);
 		view.addObject("activities", activityBo.findAll());
 		view.setViewName(VIEW_DIR + "activities");
 		return view;
@@ -37,6 +43,9 @@ public class InforController {
 
 	@RequestMapping(value = "/activities/detail/{id}", method = RequestMethod.GET)
 	public ModelAndView activitieDetailAction(@PathVariable int id) {
+		view.addObject("title", activityBo.findById(id).getTitle());
+		view.addObject("keywords", ConstKeywords.ACTIVITIES);
+		view.addObject("description", ConstDescription.ACTIVITIES);
 		view.addObject("activity", activityBo.findById(id));
 		view.setViewName(VIEW_DIR + "activitie_detail");
 		return view;
@@ -44,27 +53,28 @@ public class InforController {
 
 	@RequestMapping(value = "/about", method = RequestMethod.GET)
 	public ModelAndView aboutAction() {
+		view.addObject("title", ConstTitle.ABOUT);
+		view.addObject("keywords", ConstKeywords.ABOUT);
+		view.addObject("description", ConstDescription.ABOUT);
 		view.setViewName(VIEW_DIR + "about");
 		return view;
 	}
 
 	@RequestMapping(value = "/contact", method = RequestMethod.GET)
 	public ModelAndView contactAction() {
+		view.addObject("title", ConstTitle.CONTACT);
+		view.addObject("keywords", ConstKeywords.CONTACT);
+		view.addObject("description", ConstDescription.CONTACT);
 		view.setViewName(VIEW_DIR + "contact");
 		return view;
 	}
 
 	@RequestMapping(value = "/joinus", method = RequestMethod.GET)
 	public ModelAndView joinusAction() {
+		view.addObject("title", ConstTitle.JOINUS);
+		view.addObject("keywords", ConstKeywords.JOINUS);
+		view.addObject("description", ConstDescription.JOINUS);
 		view.addObject("recruitInfors", getCurrentList(recruitBo.findAll(), 1));
-		view.addObject("totalPage", totalPage);
-		view.setViewName(VIEW_DIR + "joinus");
-		return view;
-	}
-
-	@RequestMapping(value = "/company/joinus/{id}")
-	public ModelAndView recruitPagination(@PathVariable int id) {
-		view.addObject("recruitInfors", getCurrentList(recruitBo.findAll(), id));
 		view.addObject("totalPage", totalPage);
 		view.setViewName(VIEW_DIR + "joinus");
 		return view;
@@ -72,6 +82,9 @@ public class InforController {
 
 	@RequestMapping(value = "/joinus/{title}", method = RequestMethod.GET)
 	public ModelAndView joinusDetailAction(@PathVariable String title) {
+		view.addObject("title", title);
+		view.addObject("keywords", ConstKeywords.JOINUS);
+		view.addObject("description", ConstDescription.JOINUS);
 		view.addObject("recruitInfor", recruitBo.findByTitle(title));
 		view.setViewName(VIEW_DIR + "joinus_detail");
 		return view;

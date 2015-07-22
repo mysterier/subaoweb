@@ -16,6 +16,9 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.subaozuche.bo.ClientBo;
 import com.subaozuche.bo.OrderBo;
+import com.subaozuche.comm.utils.ConstDescription;
+import com.subaozuche.comm.utils.ConstKeywords;
+import com.subaozuche.comm.utils.ConstTitle;
 import com.subaozuche.comm.utils.Encryption;
 import com.subaozuche.comm.utils.SessionKeyContent;
 import com.subaozuche.model.Client;
@@ -31,6 +34,12 @@ public class ProfileController {
 	private ClientBo clientBo;
 	@Autowired
 	private OrderBo orderBo;
+	
+	public ProfileController() {
+		view.addObject("title", ConstTitle.PROFILE);
+		view.addObject("keywords", ConstKeywords.PROFILE);
+		view.addObject("description", ConstDescription.PROFILE);
+	}
 	
 	private int getUid() {
 		int uid = (int) request.getSession().getAttribute(SessionKeyContent.SESSION_KEY_OBJ_CLIENT_BEAN);

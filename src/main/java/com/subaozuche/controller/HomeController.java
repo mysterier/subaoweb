@@ -20,6 +20,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.subaozuche.bo.ClientBo;
+import com.subaozuche.comm.utils.ConstDescription;
+import com.subaozuche.comm.utils.ConstKeywords;
+import com.subaozuche.comm.utils.ConstTitle;
 import com.subaozuche.comm.utils.Encryption;
 import com.subaozuche.comm.utils.SessionKeyContent;
 import com.subaozuche.model.Client;
@@ -54,13 +57,18 @@ public class HomeController {
 
 	@RequestMapping(value = { "", "index" }, method = RequestMethod.GET)
 	public ModelAndView index() {
-		view.addObject("subMenuId", 0);
+		view.addObject("title", ConstTitle.INDEX);
+		view.addObject("keywords", ConstKeywords.INDEX);
+		view.addObject("description", ConstDescription.INDEX);
 		view.setViewName(VIEW_DIR + "index");
 		return view;
 	}
 
 	@RequestMapping(value = "/order", method = RequestMethod.GET)
 	public ModelAndView orderIndex() {
+		view.addObject("title", ConstTitle.ORDER);
+		view.addObject("keywords", ConstKeywords.ORDER);
+		view.addObject("description", ConstDescription.ORDER);
 		view.addObject("options", options);
 		view.addObject("newses", getCurrentList(newsBo.findAll(), 1));
 		view.addObject("order", new Order());
@@ -82,6 +90,9 @@ public class HomeController {
 
 	@RequestMapping(value = "/reg", method = RequestMethod.GET)
 	public ModelAndView regIndex() {
+		view.addObject("title", ConstTitle.REG);
+		view.addObject("keywords", ConstKeywords.REG);
+		view.addObject("description", ConstDescription.REG);
 		view.addObject("options", options);
 		view.addObject("newses", getCurrentList(newsBo.findAll(), 1));
 		view.addObject("client", new Client());
@@ -91,6 +102,9 @@ public class HomeController {
 
 	@RequestMapping(value = "/logo_res", method = RequestMethod.GET)
 	public ModelAndView logoRes() {
+		view.addObject("title", ConstTitle.FLOW);
+		view.addObject("keywords", ConstKeywords.FLOW);
+		view.addObject("description", ConstDescription.FLOW);
 		view.setViewName(VIEW_DIR + "logo_res");
 		return view;
 	}
