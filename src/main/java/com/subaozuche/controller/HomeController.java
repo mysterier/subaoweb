@@ -1,9 +1,12 @@
 package com.subaozuche.controller;
 
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
+
 import java.util.Map;
 
 import javax.validation.Valid;
@@ -21,6 +24,7 @@ import com.subaozuche.comm.utils.Encryption;
 import com.subaozuche.comm.utils.SessionKeyContent;
 import com.subaozuche.model.Client;
 import com.subaozuche.model.ClientLoginForm;
+import com.subaozuche.model.News;
 import com.subaozuche.bo.NewsBo;
 import com.subaozuche.bo.OrderBo;
 import com.subaozuche.comm.utils.ViewObjectInforHelper;
@@ -31,7 +35,11 @@ import com.subaozuche.model.Order;
 public class HomeController {
 	private static final String VIEW_DIR = "frontend/home/";
 	private ModelAndView view = new ModelAndView();
-	private Map<String, String> options = ViewObjectInforHelper.getOrderTypes();;
+	private Map<String, String> options = ViewObjectInforHelper.getOrderTypes();
+	private static int DEFAULT_PAGE_SIZE = 10;
+	private int itemPerPage = DEFAULT_PAGE_SIZE;
+	private List<News> curNewsList = new ArrayList<News>();
+
 	@Autowired
 	protected HttpServletRequest request;
 
@@ -54,7 +62,7 @@ public class HomeController {
 	@RequestMapping(value = "/order", method = RequestMethod.GET)
 	public ModelAndView orderIndex() {
 		view.addObject("options", options);
-		view.addObject("newses", newsBo.findAll());
+		view.addObject("newses", getCurrentList(newsBo.findAll(), 1));
 		view.addObject("order", new Order());
 		view.setViewName(VIEW_DIR + "order");
 		return view;
@@ -75,7 +83,7 @@ public class HomeController {
 	@RequestMapping(value = "/reg", method = RequestMethod.GET)
 	public ModelAndView regIndex() {
 		view.addObject("options", options);
-		view.addObject("newses", newsBo.findAll());
+		view.addObject("newses", getCurrentList(newsBo.findAll(), 1));
 		view.addObject("client", new Client());
 		view.setViewName(VIEW_DIR + "reg");
 		return view;
@@ -125,5 +133,16 @@ public class HomeController {
 		client.setUpdatedAt(new Timestamp(new Date().getTime()));
 		clientBo.add(client);
 		return new ModelAndView("redirect:/");
+	}
+
+	private List<News> getCurrentList(List<News> newsList, int id) {
+		int totalNews = newsList.size();
+		curNewsList.clear();
+		int startId = (id - 1) * itemPerPage;
+		int endId = startId + itemPerPage;
+		for (int i = startId; i < totalNews && i < endId; i++) {
+			curNewsList.add(newsList.get(i));
+		}
+		return curNewsList;
 	}
 }

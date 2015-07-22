@@ -16,7 +16,7 @@ public interface RecruitDao {
 	@Select("SELECT id, title, content, updated_at AS updatedAt FROM tbl_recruit WHERE title=#{title}")
 	public Recruit findByTitle(String title);
 	
-	@Select("SELECT id, title, content, updated_at AS updatedAt FROM tbl_recruit")
+	@Select("SELECT id, title, content, updated_at AS updatedAt FROM tbl_recruit ORDER BY updated_at DESC")
 	public List<Recruit> findAll();
 
 	public void add(Recruit recruit);

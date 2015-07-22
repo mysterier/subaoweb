@@ -12,13 +12,13 @@ public interface NewsDao {
 	@Select("SELECT id, title, content, created_at AS createdAt, updated_at AS updatedAt, `type` FROM tbl_news WHERE id=#{id}")
 	public News findById(int id);
 
-	@Select("SELECT id, title, content, created_at AS createdAt, updated_at AS updatedAt, `type` FROM tbl_news WHERE type=#{type}")
+	@Select("SELECT id, title, content, created_at AS createdAt, updated_at AS updatedAt, `type` FROM tbl_news WHERE type=#{type} ORDER BY updated_at DESC")
 	public List<News> findByType(int type);
 	
 	@Select("SELECT id, title, content, created_at AS createdAt, updated_at AS updatedAt, `type` FROM tbl_news WHERE title=#{title}")
 	public News findByTitle(String title);
 	
-	@Select("SELECT id, title, content, created_at AS createdAt, updated_at AS updatedAt, `type` FROM tbl_news")
+	@Select("SELECT id, title, content, created_at AS createdAt, updated_at AS updatedAt, `type` FROM tbl_news ORDER BY updated_at DESC")
 	public List<News> findAll();
 	
 	public void add(News news);

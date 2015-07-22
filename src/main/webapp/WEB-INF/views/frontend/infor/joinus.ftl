@@ -13,20 +13,17 @@
             <nav>
                 <ul class="pagination">
                     <li>
-                        <a href="#" aria-label="Previous">
-                            <span aria-hidden="true">&laquo;</span>
-                        </a>
-                    </li>
-                    <li><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li>
-                        <a href="#" aria-label="Next">
-                            <span aria-hidden="true">&raquo;</span>
-                        </a>
-                    </li>
+         			 <a href="${url}/joinus/" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+        		</li>
+				<li><a href="${url}/joinus/">1</a></li>
+				<#if (totalPage>2)>
+				<#list 2..totalPage as pageNo>
+					<li><a href="${url}/joinus/page/${pageNo}/">${pageNo}</a></li>
+				</#list>
+				</#if>
+       			<li>
+					<a href="${url}/company/page/${totalPage}/" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+       			</li>
                 </ul>
             </nav>
         </div>

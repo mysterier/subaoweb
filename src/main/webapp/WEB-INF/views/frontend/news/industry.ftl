@@ -15,15 +15,16 @@
 		   <nav>
       		<ul class="pagination">
         		<li>
-         			 <a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+         			 <a href="${url}/industry/" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
         		</li>
-    		    <li><a href="#">1</a></li>
-     	   	    <li><a href="#">2</a></li>
-				<li><a href="#">3</a></li>
-				<li><a href="#">4</a></li>
-				<li><a href="#">5</a></li>
+				<li><a href="${url}/industry/">1</a></li>
+				<#if (totalPage>2)>
+				<#list 2..totalPage as pageNo>
+					<li><a href="${url}/industry/page/${pageNo}/">${pageNo}</a></li>
+				</#list>
+				</#if>
        			<li>
-					<a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+					<a href="${url}/industry/page/${totalPage}/" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
        			</li>
       		</ul>
     	</nav>
