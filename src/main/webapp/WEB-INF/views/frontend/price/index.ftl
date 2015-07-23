@@ -1,6 +1,12 @@
 <#include "../partial/_header_main.ftl">
 <div id="sub-banner"></div>
-<div class="clearfix"></div>
+<div class="wrapper submenu">
+  <ol class="breadcrumb">
+ 	<li><a href="${url}/">苏宝租车首页</a></li>
+	<li>服务价格</a></li>
+  </ol>
+</div>
+
 <div class="wrapper pad100">
     <div class="news">
         <h3 class="text-left">服务价格

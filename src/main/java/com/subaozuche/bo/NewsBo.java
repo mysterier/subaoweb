@@ -18,4 +18,7 @@ public interface NewsBo {
 	public void update(News news);
 
 	public void delete(int id);
+	
+	public News getNeigbourPre(News news);
+	public News getNeigbourNext(News news);
 }

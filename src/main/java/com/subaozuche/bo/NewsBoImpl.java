@@ -48,4 +48,14 @@ public class NewsBoImpl implements NewsBo {
 	public void delete(int id) {
 		newsDao.delete(id);
 	}
+	
+	@Override
+	public News getNeigbourPre(News news) {
+		return newsDao.getNeigbourPre(news);
+	}
+	
+	@Override
+	public News getNeigbourNext(News news) {
+		return newsDao.getNeigbourNext(news);
+	}
 }

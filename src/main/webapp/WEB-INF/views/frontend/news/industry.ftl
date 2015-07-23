@@ -2,7 +2,7 @@
 <div id="sub-banner"></div>
 <div class="wrapper submenu">
   <ol class="breadcrumb">
-  <li><a href="${url}/">首页</a></li>
+  <li><a href="${url}/">苏宝租车首页</a></li>
   <li class="active">行业新闻</li>
   </ol>
 </div>
@@ -18,22 +18,7 @@
 			</a>
 		</div>
 		</#list>
-		   <nav>
-      		<ul class="pagination">
-        		<li>
-         			 <a href="${url}/industry/" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
-        		</li>
-				<li><a href="${url}/industry/">1</a></li>
-				<#if (totalPage>2)>
-				<#list 2..totalPage as pageNo>
-					<li><a href="${url}/industry/page/${pageNo}/">${pageNo}</a></li>
-				</#list>
-				</#if>
-       			<li>
-					<a href="${url}/industry/page/${totalPage}/" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
-       			</li>
-      		</ul>
-    	</nav>
+	${pageStr}
 	</div>
 </div>
 <#include "../partial/_footer_main.ftl">

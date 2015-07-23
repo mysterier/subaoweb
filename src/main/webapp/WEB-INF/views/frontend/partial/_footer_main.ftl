@@ -19,9 +19,9 @@
       </ul>
       <ul>
         <li><h4>关于我们</h4></li>
-        <li><a href="${url}/about/">服务优势</a></li>
-        <li><a href="${url}/joinus/">招聘信息</a></li>
-        <li><a href="${url}/contact/">联系我们</a></li>
+        <li><a href="${url}/about/" rel="nofollow">服务优势</a></li>
+        <li><a href="${url}/joinus/" rel="nofollow">招聘信息</a></li>
+        <li><a href="${url}/contact/" rel="nofollow">联系我们</a></li>
       </ul>
       <ul>
         <li><h4>新闻中心</h4></li>
@@ -31,10 +31,10 @@
       </ul>
       <ul>
         <li><h4>帮助中心</h4></li>
-        <li><a href="${url}/flow/">订单流程</a></li>
-        <li><a href="${url}/rule/">服务规则</a></li>
-        <li><a href="${url}/member/">会员介绍</a></li>
-        <li><a href="${url}/faq/">常见问题</a></li>
+        <li><a href="${url}/flow/" rel="nofollow">订单流程</a></li>
+        <li><a href="${url}/rule/" rel="nofollow">服务规则</a></li>
+        <li><a href="${url}/member/" rel="nofollow">会员介绍</a></li>
+        <li><a href="${url}/faq/" rel="nofollow">常见问题</a></li>
       </ul>
     </div>
 </div>
@@ -44,7 +44,11 @@
 </div>
 </footer>
 <div id="return"><a href="javascript:scroll(0,0)"><img src="${url}/img/return.png" width="64px" height="64px"></a></div>
-
+<!-- subaozuche.com Baidu tongji analytics -->
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Ff7a989245c26562b19cce212fc326188' type='text/javascript'%3E%3C/script%3E"));
+</script>
 </body>
 
 </html>

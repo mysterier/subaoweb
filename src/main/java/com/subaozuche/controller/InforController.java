@@ -41,7 +41,7 @@ public class InforController {
 		return view;
 	}
 
-	@RequestMapping(value = "/activities/detail/{id}", method = RequestMethod.GET)
+	@RequestMapping(value = "/activities/{id}.html", method = RequestMethod.GET)
 	public ModelAndView activitieDetailAction(@PathVariable int id) {
 		view.addObject("title", activityBo.findById(id).getTitle());
 		view.addObject("keywords", ConstKeywords.ACTIVITIES);

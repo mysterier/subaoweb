@@ -28,4 +28,10 @@ public interface NewsDao {
 
 	@Delete("DELETE FROM tbl_news WHERE id=#{id}")
 	public void delete(int id);
+	
+	@Select("SELECT id, title, `type` FROM tbl_news WHERE type=#{type} AND id < #{id} ORDER BY id DESC limit 1")
+	public News getNeigbourPre(News news);
+	
+	@Select("SELECT id, title, `type` FROM tbl_news WHERE type=#{type} AND id > #{id} ORDER BY id ASC limit 1")
+	public News getNeigbourNext(News news);
 }

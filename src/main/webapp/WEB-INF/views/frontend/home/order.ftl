@@ -1,6 +1,12 @@
 <#include "../partial/_header_main.ftl">
 <@spring.formHiddenInput "order.id" />
 <div id="sub-banner"></div>
+<div class="wrapper submenu">
+  <ol class="breadcrumb">
+ 	<li><a href="${url}/">苏宝租车首页</a></li>
+	<li>在线订车</a></li>
+  </ol>
+</div>
 <div class="wrapper pad100">
 	<div class="order">
     	<div class="order-left col-md-6">

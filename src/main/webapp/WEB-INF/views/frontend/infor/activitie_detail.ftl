@@ -2,7 +2,7 @@
 <div id="sub-banner"></div>
 <div class="wrapper submenu">
   <ol class="breadcrumb">
- 	<li><a href="${url}/">首页</a></li>
+ 	<li><a href="${url}/">苏宝租车首页</a></li>
  	<li><a href="${url}/activities/">优惠活动</a></li>
 	<li>${activity.title}</li>
   </ol>

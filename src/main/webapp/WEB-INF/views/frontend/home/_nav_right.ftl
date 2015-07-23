@@ -8,7 +8,7 @@
 	</#if>
 	<div class="order-look">
 	<#list newses as news>
-		<a href="${url}/<#if news.type==0>industry<#else>company</#if>/${news.id}.html">
+		<a href="${url}/<#if news.type==0>industry<#else>company</#if>/${news.id?c}.html">
 			<div></div>
 			<p>${news.title}</p>
 		</a>
