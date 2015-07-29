@@ -15,12 +15,12 @@
 	<tbody>
 	<#list recruits as recruit>
 		<tr>
-			<td>${recruit.id}</td>
+			<td>${recruit.id?c}</td>
 			<td>${recruit.title}</td>
 			<td>${recruit.content}</td>
 			<td>${recruit.updatedAt}</td>
-			<td class="center"><a href="${backendUrl}/recruit/${recruit.id}/edit/">修改</a></td>
-			<td class="center"><a href="${backendUrl}/recruit/${recruit.id}/delete/" class="delete">删除</a></td>
+			<td class="center"><a href="${backendUrl}/recruit/${recruit.id?c}/edit/">修改</a></td>
+			<td class="center"><a href="${backendUrl}/recruit/${recruit.id?c}/delete/" class="delete">删除</a></td>
 		</tr>
 	</#list>
 	</tbody>

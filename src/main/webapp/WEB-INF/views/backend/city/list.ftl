@@ -13,10 +13,10 @@
 	<tbody>
 	<#list cities as city>
 		<tr>
-			<td>${city.id}</td>
+			<td>${city.id?c}</td>
 			<td>${city.cityName}</td>
-			<td class="center"><a href="${backendUrl}/city/${city.id}/edit/">修改</a></td>
-			<td class="center"><a href="${backendUrl}/city/${city.id}/delete/" class="delete">删除</a></td>
+			<td class="center"><a href="${backendUrl}/city/${city.id?c}/edit/">修改</a></td>
+			<td class="center"><a href="${backendUrl}/city/${city.id?c}/delete/" class="delete">删除</a></td>
 		</tr>
 	</#list>
 	</tbody>

@@ -20,17 +20,17 @@
 	<tbody>
 	<#list orders as order>
 		<tr>
-			<td>${order.id}</td>
+			<td>${order.id?c}</td>
 			<td>${order.cityId}</td>
 			<td>${order.rentTime}</td>
 			<td>${order.contactName}</td>
 			<td>${order.contactPhone}</td>
 			<td>${order.rentType}</td>
 			<td>${order.rentOther}</td>
-			<td>${order.clientId}</td>
+			<td>${order.clientId?c}</td>
 			<td>${order.createdAt}</td>
-			<td class="center"><a href="${backendUrl}/order/${order.id}/edit/">修改</a></td>
-			<td class="center"><a href="${backendUrl}/order/${order.id}/delete/" class="delete">删除</a></td>
+			<td class="center"><a href="${backendUrl}/order/${order.id?c}/edit/">修改</a></td>
+			<td class="center"><a href="${backendUrl}/order/${order.id?c}/delete/" class="delete">删除</a></td>
 		</tr>
 	</#list>
 	</tbody>

@@ -7,7 +7,6 @@
 			<th>ID</th>
 			<th>类型</th>
 			<th>标题</th>
-			<th>内容</th>
 			<th>创建时间</th>
 			<th>更新时间</th>
 			<th>&nbsp;</th>
@@ -17,14 +16,13 @@
 	<tbody>
 	<#list newses as news>
 		<tr>
-			<td>${news.id}</td>
+			<td>${news.id?c}</td>
 			<td>${news.type}</td>
 			<td>${news.title}</td>
-			<td>${news.content}</td>
 			<td>${news.createdAt}</td>
 			<td>${news.updatedAt}</td>
-			<td class="center"><a href="${backendUrl}/news/${news.id}/edit/">修改</a></td>
-			<td class="center"><a href="${backendUrl}/news/${news.id}/delete/" class="delete">删除</a></td>
+			<td class="center"><a href="${backendUrl}/news/${news.id?c}/edit/">修改</a></td>
+			<td class="center"><a href="${backendUrl}/news/${news.id?c}/delete/" class="delete">删除</a></td>
 		</tr>
 	</#list>
 	</tbody>

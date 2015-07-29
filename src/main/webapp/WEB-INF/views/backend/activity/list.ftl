@@ -18,15 +18,15 @@
 	<tbody>
 	<#list activities as activity>
 		<tr>
-			<td>${activity.id}</td>
+			<td>${activity.id?c}</td>
 			<td>${activity.title}</td>
 			<td>${activity.city}</td>
 			<td>${activity.activityIntro}</td>
 			<td>${activity.content}</td>
 			<td>${activity.activityStart}</td>
 			<td>${activity.activityEnd}</td>
-			<td class="center"><a href="${backendUrl}/activity/${activity.id}/edit/">修改</a></td>
-			<td class="center"><a href="${backendUrl}/activity/${activity.id}/delete/" class="delete">删除</a></td>
+			<td class="center"><a href="${backendUrl}/activity/${activity.id?c}/edit/">修改</a></td>
+			<td class="center"><a href="${backendUrl}/activity/${activity.id?c}/delete/" class="delete">删除</a></td>
 		</tr>
 	</#list>
 	</tbody>

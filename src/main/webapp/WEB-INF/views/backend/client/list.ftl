@@ -17,14 +17,14 @@
 	<tbody>
 	<#list clients as client>
 		<tr>
-			<td>${client.id}</td>
+			<td>${client.id?c}</td>
 			<td>${client.mobile}</td>
 			<td>${client.clientName}</td>
 			<td>${client.clientEmail}</td>
 			<td>${client.createdAt}</td>
 			<td>${client.updatedAt}</td>
-			<td class="center"><a href="${backendUrl}/client/${client.id}/edit/">修改</a></td>
-			<td class="center"><a href="${backendUrl}/client/${client.id}/delete/" class="delete">删除</a></td>
+			<td class="center"><a href="${backendUrl}/client/${client.id?c}/edit/">修改</a></td>
+			<td class="center"><a href="${backendUrl}/client/${client.id?c}/delete/" class="delete">删除</a></td>
 		</tr>
 	</#list>
 	</tbody>

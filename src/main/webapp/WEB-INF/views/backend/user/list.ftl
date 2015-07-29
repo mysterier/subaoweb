@@ -13,10 +13,10 @@
 	<tbody>
 		<#list users as user>  
 			<tr>
-				<td>${user.id}</td>
+				<td>${user.id?c}</td>
 				<td>${user.userName}</td>
-				<td class="center"><a href="${backendUrl}/adminuser/${user.id}/edit/">修改</a></td>
-				<td class="center"><a href="${backendUrl}/adminuser/${user.id}/delete/">删除</a></td>
+				<td class="center"><a href="${backendUrl}/adminuser/${user.id?c}/edit/">修改</a></td>
+				<td class="center"><a href="${backendUrl}/adminuser/${user.id?c}/delete/">删除</a></td>
 			</tr>
 		</#list>
 	</tbody>
