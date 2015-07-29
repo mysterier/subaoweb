@@ -1,12 +1,15 @@
 <#include "../partial/_header_main.ftl">
 <div id="sub-banner"></div>
-<div class="wrapper submenu">
+<div class="wrapper pad100">
+<#include "../partial/_nav_left.ftl">
+<div class="help-right col-md-9">
+<div class="submenu">
   <ol class="breadcrumb">
  	<li><a href="${url}/">苏宝租车首页</a></li>
 	<li>优惠活动</li>
   </ol>
 </div>
-<div class="wrapper pad50">
+<div>
 	<div class="news">
     	<h3 class="text-left">优惠活动
 		<span class="text-left">SPECIAL OFFER</span>
@@ -21,5 +24,8 @@
       	</div>
 		</#list>
   	</div>
+</div>
+</div>
+<div class="clearfix"></div>
 </div>
 <#include "../partial/_footer_main.ftl">

@@ -1,6 +1,9 @@
 <#include "../partial/_header_main.ftl">
 <div id="sub-banner"></div>
-<div class="wrapper submenu">
+<div class="wrapper pad100">
+<#include "../partial/_nav_left.ftl">
+<div class="help-right col-md-9">
+<div class="submenu">
   <ol class="breadcrumb">
  	<li><a href="${url}/">苏宝租车首页</a></li>
 	<li><a href="${url}/company/">公司新闻</a></li>
@@ -12,5 +15,8 @@
 	<p class="text-center gray">${companyNews.updatedAt}</p>
 	<p class="text-left gray">${companyNews.content}</p>
 	<#include "_neigbour.ftl">
+</div>
+</div>
+<div class="clearfix"></div>
 </div>
 <#include "../partial/_footer_main.ftl">
