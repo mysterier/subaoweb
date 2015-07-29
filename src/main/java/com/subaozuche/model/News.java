@@ -19,6 +19,7 @@ public class News {
 	@Min(0)
 	@Max(1)
 	private int type;
+	private String typeName;
 
 	public int getId() {
 		return id;
@@ -66,6 +67,18 @@ public class News {
 
 	public void setType(int type) {
 		this.type = type;
+	}
+
+	public String getTypeString() {
+		switch (this.type) {
+		case 0:
+			typeName = "行业新闻";
+			break;
+		case 1:
+			typeName = "公司新闻";
+			break;
+		}
+		return typeName;
 	}
 
 	@Override

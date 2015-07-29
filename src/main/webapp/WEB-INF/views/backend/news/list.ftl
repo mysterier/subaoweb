@@ -17,7 +17,7 @@
 	<#list newses as news>
 		<tr>
 			<td>${news.id?c}</td>
-			<td>${news.type}</td>
+			<td>${news.getTypeString()}</td>
 			<td>${news.title}</td>
 			<td>${news.createdAt}</td>
 			<td>${news.updatedAt}</td>
