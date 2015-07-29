@@ -8,47 +8,53 @@
     <p class="text-center gray subtitle">我们提供多样性、全方位的用车服务。以解决人们各种生活需要，让轻松和惬意代替焦躁与拥挤，为您的出行保驾护航，让您的旅途更精彩 </p>
     <div class="service">
       <div class="col-md-4">
-        <div class="service-content service-1 text-center">
-          <h4 class="gray-darker">机场接送</h4>
+          <div class="service-content text-center">
+			<a href="${url}/service-jichang/"><img src="/img/fwu_1.png" /></a>
+          <a href="${url}/service-jichang/"><h4 class="gray-darker">接机送机</h4></a>
           <p class="gray">上海苏宝租车公司为你提供最专业的机场接送服务，当您下飞机后拖着疲惫的身躯和沉重
             的行李，还在为排长队苦苦等候一辆出租车而感到烦恼吗？只要上苏宝上海租车网我们就会
             派专人手持您的名牌，在机场大厅处等候，把您接入专车送到府上或者您指定的任何地点。</p>
-        <a href="${url}/service-jichang/">点击详情</a>
+        <div class="service-detail"><a href="${url}/service-jichang/">点击详情</a></div>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="service-content service-2 text-center">
-          <h4 class="gray-darker">商务用车</h4>
+        <div class="service-content text-center">
+		  <a href="${url}/service-shangwu/"><img src="/img/fwu_2.png" /></a>
+          <a href="${url}/service-shangwu/"><h4 class="gray-darker">商务用车</h4></a>
           <p class="gray">在上海租企业班车就找苏宝，苏宝为您提供企业班车服务，公司优质的班车服务让您公司上下班的员工不再抱怨，同时也给员工或客户创造一个温馨满意的车厢环境。</p>
-          <a href="${url}/service-shangwu/">点击详情</a>
+           <div class="service-detail"><a href="${url}/service-shangwu/">点击详情</a></div>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="service-content service-3 text-center ">
-          <h4 class="gray-darker">商务会议接送</h4>
+        <div class="service-content text-center ">
+		  <a href="${url}/service-huiyi/"><img src="/img/fuwu_6.png" /></a>
+          <a href="${url}/service-huiyi/"><h4 class="gray-darker">商务会议接送</h4></a>
           <p class="gray">当您到市区、或近郊去参加高级商务、学术性会议。会为找不到地点而烦扰吗？只要通过电话或Email订车，我们会及时把您送到指定地点。</p>
-          <a href="${url}/service-huiyi/">点击详情</a>
+          <div class="service-detail"><a href="${url}/service-huiyi/">点击详情</a></div>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="service-content service-4 text-center">
-          <h4 class="gray-darker">企业班车</h4>
+        <div class="service-content text-center">
+		  <a href="${url}/service-banche/"><img src="/img/fwu_3.png" /></a>
+          <a href="${url}/service-banche/"><h4 class="gray-darker">企业班车</h4></a>
           <p class="gray">您是否有过这样的困惑？要招待亲朋好友或商务客人却无法事先确定行程？我们的包车服务不仅提供全天的出车服务，经验丰富的司机还能为您提供市内、市郊的各类主要景点路线和餐厅信息，让您的出行更轻松、更方便。</p>
-          <a href="${url}/service-banche/">点击详情</a>
+          <div class="service-detail"><a href="${url}/service-banche/">点击详情</a></div>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="service-content service-5 text-center">
-          <h4 class="gray-darker">旅游租车</h4>
+        <div class="service-content text-center">
+		  <a href="${url}/service-lvyou/"><img src="/img/fwu_4.png" /></a>
+          <a href="${url}/service-lvyou/"><h4 class="gray-darker">旅游租车</h4></a>
           <p class="gray">逢年过节外出旅游，我们就需要到车，特别在上海进行旅游租车，是一件很麻烦的事，那么不用担心，苏宝将为你解决一切！</p>
-        <a href="${url}/service-lvyou/">点击详情</a>
+       	  <div class="service-detail"><a href="${url}/service-lvyou/">点击详情</a></div>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="service-content service-6 text-center ">
-          <h4 class="gray-darker">婚庆租车</h4>
+        <div class="service-content text-center ">
+		  <a href="${url}/service-hunqing/"><img src="/img/fuwu_7.png" /></a>
+          <a href="${url}/service-hunqing/"><h4 class="gray-darker">婚庆租车</h4></a>
           <p class="gray">婚姻是每个人一生中的大事，一场豪华奢侈的婚礼是必不可少的，而用车是婚礼中很重的的一部分。苏宝租车，圆你一个豪华婚礼</p>
-        <a href="${url}/service-hunqing/">点击详情</a>
+          <div class="service-detail"><a href="${url}/service-hunqing/">点击详情</a></div>
         </div>
       </div>
       </div>

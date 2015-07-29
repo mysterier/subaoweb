@@ -10,11 +10,10 @@
 </div>
 <div class="wrapper pad100">
     <div class="service-hgroup-title">
-        <h3 class="text-center gray-darker">接机送机</h3>
-        <p class="text-center gray">当您拖着疲惫的身躯和沉重的行李到达机场的时候，下了飞机站在交通 台上，看着前面长长的等车队伍，您心情会感到烦恼吗？当你好不容易打到车时，却发现到目的地的车价非常昂贵，您会忧愁吗？
+        <h1 class="text-center gray-darker">接机送机</h1>
+        <p class="gray">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;当您拖着疲惫的身躯和沉重的行李到达机场的时候，下了飞机站在交通 台上，看着前面长长的等车队伍，您心情会感到烦恼吗？当你好不容易打到车时，却发现到目的地的车价非常昂贵，您会忧愁吗？
         </p>
-        <p class="text-center gray">
-            没事，苏宝租车为您提供最专业的机场接送服务，让您在机场接送租车的过程中享受尊贵的待遇，使您可以下机不用为打不到车、车价贵等问题而烦恼。同时苏宝也为您考虑到，在想享受租车接机和机场接送租车同时，若有需要可以进行专人机场大厅接送，把您带上专车载到您指定的任何地点，让您有更加舒适的享受机场接送服务。
+        <p class="gray">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;没事，苏宝租车为您提供最专业的机场接送服务，让您在机场接送租车的过程中享受尊贵的待遇，使您可以下机不用为打不到车、车价贵等问题而烦恼。同时苏宝也为您考虑到，在想享受租车接机和机场接送租车同时，若有需要可以进行专人机场大厅接送，把您带上专车载到您指定的任何地点，让您有更加舒适的享受机场接送服务。
         </p>
     </div>
 	<a href="${url}/order/" class="btn btn-block btn-subscribe">点击预约</a>

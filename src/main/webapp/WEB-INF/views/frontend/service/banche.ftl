@@ -10,10 +10,9 @@
 </div>
 <div class="wrapper pad100">
     <div class="service-hgroup-title">
-        <h3 class="text-center gray-darker">企业班车</h3>
-        <p class="text-center gray">当今社会，很多企业为了留住员工的心，让员工能够更尽心的为企业做事，他们往往都提高一些福利，如企业班车。</p>
-        <p class="text-center gray">
-            由于近几年社会整体的消费水平提高、公交的涨价等，很多企业就为员工提供上下班班车服务。其中上海的企业班车租赁较为多，因为上海属于一线城市，企业为了员工能够方便上下班，于是就特意租企业班车。且上海企业班车服务也是数不胜数，但是苏宝租车的出现，使得企业班车出租这行业更加的繁荣。
+        <h1 class="text-center gray-darker">企业班车</h1>
+        <p class="gray">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;当今社会，很多企业为了留住员工的心，让员工能够更尽心的为企业做事，他们往往都提高一些福利，如企业班车。</p>
+        <p class="gray">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;由于近几年社会整体的消费水平提高、公交的涨价等，很多企业就为员工提供上下班班车服务。其中上海的企业班车租赁较为多，因为上海属于一线城市，企业为了员工能够方便上下班，于是就特意租企业班车。且上海企业班车服务也是数不胜数，但是苏宝租车的出现，使得企业班车出租这行业更加的繁荣。
         </p>
     </div>
     <a href="${url}/order/" class="btn btn-block btn-subscribe">点击预约</a>

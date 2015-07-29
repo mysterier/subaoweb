@@ -10,7 +10,7 @@
 </div>
 <div class="wrapper pad100">
     <div class="service-hgroup-title">
-        <h3 class="text-center gray-darker">婚庆租车</h3>
+        <h1 class="text-center gray-darker">婚庆租车</h1>
     </div>
     <div class="service-img"><img src="${url}/img/service7.jpg"></div>
     <div class="service-hgroup-content">

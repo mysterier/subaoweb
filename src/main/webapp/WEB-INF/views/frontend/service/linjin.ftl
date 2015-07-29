@@ -10,7 +10,7 @@
 </div>
 <div class="wrapper pad100">
     <div class="service-hgroup-title">
-        <h3 class="text-center gray-darker">邻近城市专送</h3>
+        <h1 class="text-center gray-darker">邻近城市专送</h1>
     </div>
     <div class="service-img"><img src="${url}/img/service6.jpg"></div>
     <div class="service-hgroup-content">

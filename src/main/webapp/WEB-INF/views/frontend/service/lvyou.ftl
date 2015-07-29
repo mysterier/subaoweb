@@ -9,7 +9,7 @@
   </ol>
 </div>
 <div class="wrapper pad100">
-    <h3 class="text-center gray-darker">旅游租车</h3>
+    <h1 class="text-center gray-darker">旅游租车</h1>
     <div class="service-img"><img src="${url}/img/service5.jpg"></div>
     <div class="service-hgroup-content">
         <dl class="text-left">

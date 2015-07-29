@@ -60,7 +60,7 @@
             <li><a href="${url}/service-jichang/">接机送机</a></li>
             <li><a href="${url}/service-banche/">企业班车</a></li>
             <li><a href="${url}/service-huiyi/">商务会议接送</a></li>
-            <li><a href="${url}/service-shangwu/">商务用车</a></li>
+            <li><a href="${url}/service-shangwu/">商务租车</a></li>
             <li><a href="${url}/service-lvyou/">旅游租车</a></li>
             <li><a href="${url}/service-linjin/">邻近城市专送</a></li>
             <li><a href="${url}/service-hunqing/">婚庆租车</a></li>
