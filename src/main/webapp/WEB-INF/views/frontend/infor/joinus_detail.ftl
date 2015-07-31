@@ -13,7 +13,7 @@
 <div class="wrapper-text pad50 activities-list-content">
 	<h3 class="text-center gray-darker">${recruitInfor.title}</h3>
 	<p class="text-center gray">${recruitInfor.updatedAt}</p>
-	<p class="text-left gray">${recruitInfor.content}</p>
+	<div><p class="text-left gray">${recruitInfor.content}</p></div>
 </div>
 </div>
 <div class="clearfix"></div>
