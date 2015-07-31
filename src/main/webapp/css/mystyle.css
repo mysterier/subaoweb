@@ -529,6 +529,9 @@ footer {
 .activities-list p {
     font-weight: bold;
 }
+.activities-list-content .text-left{
+	text-indent:2em;
+}
 
 .activities-list p span {
     font-weight: normal;

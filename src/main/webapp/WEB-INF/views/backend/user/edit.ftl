@@ -4,7 +4,7 @@
 	<p class="text-right"><a class="btn btn-default" href="${backendUrl}/adminuser">返回</a></p>
 	<div class="row">
 		<div class="col-lg-12">
-			<form class="form-horizontal" action="${backendUrl}/adminuser/${adminUser.id}/edit" method="post">
+			<form class="form-horizontal" action="${backendUrl}/adminuser/${adminUser.id?c}/edit" method="post">
 				<#include "_form.ftl">
 				<div class="form-group">
 					<div class="col-lg-offset-2 col-lg-10">
