@@ -529,7 +529,7 @@ footer {
 .activities-list p {
     font-weight: bold;
 }
-.activities-list-content .text-left{
+.activities-list-content div p{
 	text-indent:2em;
 }
 

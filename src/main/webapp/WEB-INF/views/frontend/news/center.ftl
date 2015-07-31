@@ -1,4 +1,4 @@
-an<#include "../partial/_header_main.ftl">
+<#include "../partial/_header_main.ftl">
 <div id="sub-banner"></div>
 <div class="wrapper pad100">
 <#include "../partial/_nav_left.ftl">

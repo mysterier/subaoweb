@@ -13,7 +13,7 @@
 <div class="wrapper-text pad50 activities-list-content">
 	<h1 class="text-center gray-darker">${industryNews.title}</h1>
 	<p class="text-center gray">${industryNews.updatedAt}</p>
-	<p class="text-left gray">${industryNews.content}</p>
+	<div><p class="text-left gray">${industryNews.content}</p></div>
 	<#include "_neigbour.ftl">
 </div>
 </div>
